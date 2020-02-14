@@ -1,6 +1,6 @@
 # Melee Framedata Database
 
-*Melee Frame Data* is a web application inspired by [Ultimate Frame Data](https://ultimateframedata.com/) to give players easy and convenient access to gameplay data that is otherwise not readily avaliable. The database utilizes Flask as the webframe for the main Python program, which uses SQLAlchemy to store the data for each character
+The *Melee Database* is a web application inspired by [Ultimate Frame Data](https://ultimateframedata.com/) to give players easy and convenient access to gameplay data that is otherwise not readily avaliable. The database utilizes Flask as the webframe for the main Python program, which uses SQLAlchemy to store the data for each character
 
 ![](static/images/logo.png)
 
