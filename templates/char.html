@@ -1,0 +1,351 @@
+{% extends "template.html" %}
+
+{% block style %}{{style}}{% endblock %}
+
+{% block title %}{{name}}{% endblock %}
+{% block character %}{{name}}{% endblock %}
+
+{% block image %}{{img}}{% endblock %}
+
+
+{% block gif_jab1 %}{{gif}}jab1.gif{% endblock %}
+{% block gif_jab2 %}{{gif}}jab2.gif{% endblock %}
+{% block gif_jab3 %}{{gif}}jab3.gif{% endblock %}
+{% block gif_jabr %}{{gif}}rjab.gif{% endblock %}
+{% block gif_ftilt %}{{gif}}ftilt.gif{% endblock %}
+{% block gif_utilt %}{{gif}}utilt.gif{% endblock %}
+{% block gif_dtilt %}{{gif}}dtilt.gif{% endblock %}
+{% block gif_dattack %}{{gif}}dattack.gif{% endblock %}
+{% block gif_fsmash %}{{gif}}fsmash.gif{% endblock %}
+{% block gif_usmash %}{{gif}}usmash.gif{% endblock %}
+{% block gif_dsmash %}{{gif}}dsmash.gif{% endblock %}
+{% block gif_nair %}{{gif}}nair.gif{% endblock %}
+{% block gif_fair %}{{gif}}fair.gif{% endblock %}
+{% block gif_bair %}{{gif}}bair.gif{% endblock %}
+{% block gif_uair %}{{gif}}uair.gif{% endblock %}
+{% block gif_dair %}{{gif}}dair.gif{% endblock %}
+{% block gif_neutralb %}{{gif}}neutralb.gif{% endblock %}
+{% block gif_aneutralb %}{{gif}}a-neutralb.gif{% endblock %}
+{% block gif_sideb %}{{gif}}sideb.gif{% endblock %}
+{% block gif_asideb %}{{gif}}a-sideb.gif{% endblock %}
+{% block gif_upb %}{{gif}}upb.gif{% endblock %}
+{% block gif_aupb %}{{gif}}a-upb.gif{% endblock %}
+{% block gif_downb %}{{gif}}downb.gif{% endblock %}
+{% block gif_adownb %}{{gif}}a-downb.gif{% endblock %}
+
+{% block gif_sgrab %}{{gif}}grab.gif{% endblock %}
+{% block gif_dgrab %}{{gif}}dgrab.gif{% endblock %}
+{% block gif_pgrab %}{{gif}}pgrab.gif{% endblock %}
+{% block gif_fthrow %}{{gif}}fthrow.gif{% endblock %}
+{% block gif_bthrow %}{{gif}}bthrow.gif{% endblock %}
+{% block gif_dthrow %}{{gif}}dthrow.gif{% endblock %}
+{% block gif_uthrow %}{{gif}}uthrow.gif{% endblock %}
+{% block gif_sdodge %}{{gif}}sdodge.gif{% endblock %}
+{% block gif_broll %}{{gif}}broll.gif{% endblock %}
+{% block gif_froll %}{{gif}}froll.gif{% endblock %}
+{% block gif_adodge %}{{gif}}adodge.gif{% endblock %}
+
+
+{% block jab1_start %}{{data[0].start}}{% endblock %}
+{% block jab1_active1 %}{{data[0].start}}{% endblock %}{% block jab1_active2 %}{{data[0].end}}{% endblock %}
+{% block jab1_total %}{{data[0].total}}{% endblock %}
+{% block jab1_iasa %}{{data[0].iasa}}{% endblock %}
+{% block jab1_stun %}{{data[0].stun}}{% endblock %}
+{% block jab1_percent %}{{data[0].percent}}{% endblock %}{% block jab1_wpercent %}{{data[0].percent_weak}}{% endblock %}
+{% block jab1_notes %}{{data[0].notes}}{% endblock %}
+
+{% block jab2_start %}{{data[28].start}}{% endblock %}
+{% block jab2_active1 %}{{data[28].start}}{% endblock %}{% block jab2_active2 %}{{data[28].end}}{% endblock %}
+{% block jab2_total %}{{data[28].total}}{% endblock %}
+{% block jab2_iasa %}{{data[28].iasa}}{% endblock %}
+{% block jab2_stun %}{{data[28].stun}}{% endblock %}
+{% block jab2_percent %}{{data[28].percent}}{% endblock %}{% block jab2_wpercent %}{{data[28].percent_weak}}{% endblock %}
+{% block jab2_notes %}{{data[28].notes}}{% endblock %}
+
+{% block jab3_start %}{{data[29].start}}{% endblock %}
+{% block jab3_active1 %}{{data[29].start}}{% endblock %}{% block jab3_active2 %}{{data[29].end}}{% endblock %}
+{% block jab3_total %}{{data[29].total}}{% endblock %}
+{% block jab3_iasa %}{{data[29].iasa}}{% endblock %}
+{% block jab3_stun %}{{data[29].stun}}{% endblock %}
+{% block jab3_percent %}{{data[29].percent}}{% endblock %}{% block jab3_wpercent %}{{data[29].percent_weak}}{% endblock %}
+{% block jab3_notes %}{{data[29].notes}}{% endblock %}
+
+{% block jabr_start %}{{data[30].start}}{% endblock %}
+{% block jabr_active1 %}{{data[30].start}}{% endblock %}{% block jabr_active2 %}{{data[30].end}}{% endblock %}
+{% block jabr_total %}{{data[30].total}}{% endblock %}
+{% block jabr_iasa %}{{data[30].iasa}}{% endblock %}
+{% block jabr_stun %}{{data[30].stun}}{% endblock %}
+{% block jabr_percent %}{{data[30].percent}}{% endblock %}{% block jabr_wpercent %}{{data[30].percent_weak}}{% endblock %}
+{% block jabr_notes %}{{data[30].notes}}{% endblock %}
+
+
+{% block ftilt_start %}{{data[1].start}}{% endblock %}
+{% block ftilt_active1 %}{{data[1].start}}{% endblock %}{% block ftilt_active2 %}{{data[1].end}}{% endblock %}
+{% block ftilt_total %}{{data[1].total}}{% endblock %}
+{% block ftilt_iasa %}{{data[1].iasa}}{% endblock %}
+{% block ftilt_stun %}{{data[1].stun}}{% endblock %}
+{% block ftilt_percent %}{{data[1].percent}}{% endblock %}{% block ftilt_wpercent %}{{data[1].percent_weak}}{% endblock %}
+{% block ftilt_notes %}{{data[1].notes}}{% endblock %}
+
+
+{% block utilt_start %}{{data[2].start}}{% endblock %}
+{% block utilt_active1 %}{{data[2].start}}{% endblock %}{% block utilt_active2 %}{{data[2].end}}{% endblock %}
+{% block utilt_total %}{{data[2].total}}{% endblock %}
+{% block utilt_iasa %}{{data[2].iasa}}{% endblock %}
+{% block utilt_stun %}{{data[2].stun}}{% endblock %}
+{% block utilt_percent %}{{data[2].percent}}{% endblock %}{% block utilt_wpercent %}{{data[2].percent_weak}}{% endblock %}
+{% block utilt_notes %}{{data[2].notes}}{% endblock %}
+
+
+
+{% block dtilt_start %}{{data[3].start}}{% endblock %}
+{% block dtilt_active1 %}{{data[3].start}}{% endblock %}{% block dtilt_active2 %}{{data[3].end}}{% endblock %}
+{% block dtilt_total %}{{data[3].total}}{% endblock %}
+{% block dtilt_iasa %}{{data[3].iasa}}{% endblock %}
+{% block dtilt_stun %}{{data[3].stun}}{% endblock %}
+{% block dtilt_percent %}{{data[3].percent}}{% endblock %}{% block dtilt_wpercent %}{{data[3].percent_weak}}{% endblock %}
+{% block dtilt_notes %}{{data[3].notes}}{% endblock %}
+
+
+
+{% block dash_start %}{{data[4].start}}{% endblock %}
+{% block dash_active1 %}{{data[4].start}}{% endblock %}{% block dash_active2 %}{{data[4].end}}{% endblock %}
+{% block dash_total %}{{data[4].total}}{% endblock %}
+{% block dash_iasa %}{{data[4].iasa}}{% endblock %}
+{% block dash_stun %}{{data[4].stun}}{% endblock %}
+{% block dash_percent %}{{data[4].percent}}{% endblock %}{% block dash_wpercent %}{{data[4].percent_weak}}{% endblock %}
+{% block dash_notes %}{{data[4].notes}}{% endblock %}
+
+
+
+{% block fsmash_start %}{{data[5].start}}{% endblock %}
+{% block fsmash_active1 %}{% endblock %}{{data[5].start}}{% block fsmash_active2 %}{{data[5].end}}{% endblock %}
+{% block fsmash_total %}{{data[5].total}}{% endblock %}
+{% block fsmash_iasa %}{{data[5].iasa}}{% endblock %}
+{% block fsmash_stun %}{{data[5].stun}}{% endblock %}
+{% block fsmash_percent %}{{data[5].percent}}{% endblock %}{% block fsmash_wpercent %}{{data[5].percent_weak}}{% endblock %}
+{% block fsmash_notes %}{{data[5].notes}}{% endblock %}
+
+
+
+{% block usmash_start %}{{data[6].start}}{% endblock %}
+{% block usmash_active1 %}{{data[6].start}}{% endblock %}{% block usmash_active2 %}{{data[6].end}}{% endblock %}
+{% block usmash_total %}{{data[6].total}}{% endblock %}
+{% block usmash_iasa %}{{data[6].iasa}}{% endblock %}\
+{% block usmash_stun %}{{data[6].stun}}{% endblock %}
+{% block usmash_percent %}{{data[6].percent}}{% endblock %}{% block usmash_wpercent %}{{data[6].percent_weak}}{% endblock %}
+{% block usmash_notes %}{{data[6].notes}}{% endblock %}
+
+
+
+{% block dsmash_start %}{{data[7].start}}{% endblock %}
+{% block dsmash_active1 %}{% endblock %}{{data[7].start}}{% block dsmash_active2 %}{{data[7].end}}{% endblock %}
+{% block dsmash_total %}{{data[7].total}}{% endblock %}
+{% block dsmash_iasa %}{{data[7].iasa}}{% endblock %}
+{% block dsmash_stun %}{{data[7].stun}}{% endblock %}
+{% block dsmash_percent %}{{data[7].percent}}{% endblock %}{% block dsmash_wpercent %}{{data[7].percent_weak}}{% endblock %}
+{% block dsmash_notes %}{{data[7].notes}}{% endblock %}
+
+
+
+
+{% block nair_start %}{{data[8].start}}{% endblock %}
+{% block nair_active1 %}{{data[8].start}}{% endblock %}{% block nair_active2 %}{{data[8].end}}{% endblock %}
+{% block nair_total %}{{data[8].total}}{% endblock %}
+{% block nair_stun %}{{data[8].stun}}{% endblock %}
+{% block nair_percent %}{{data[8].percent}}{% endblock %}{% block nair_wpercent %}{{data[8].percent_weak}}{% endblock %}
+{% block nair_lag %}{{data[8].land_lag}}{% endblock %}
+{% block nair_lcancel %}{{data[8].cancel_lag}}{% endblock %}
+{% block nair_acancel1 %}{{data[8].auto_cancel_s}}{% endblock %}
+{% block nair_acancel2 %}{{data[8].auto_cancel_e}}{% endblock %}
+{% block nair_notes %}{{data[8].notes}}{% endblock %}
+
+{% block fair_start %}{{data[9].start}}{% endblock %}
+{% block fair_active1 %}{{data[9].start}}{% endblock %}{% block fair_active2 %}{{data[9].end}}{% endblock %}
+{% block fair_total %}{{data[9].total}}{% endblock %}
+{% block fair_stun %}{{data[9].stun}}{% endblock %}
+{% block fair_percent %}{{data[9].percent}}{% endblock %}{% block fair_wpercent %}{{data[9].percent_weak}}{% endblock %}
+{% block fair_lag %}{{data[9].land_lag}}{% endblock %}
+{% block fair_lcancel %}{{data[9].cancel_lag}}{% endblock %}
+{% block fair_acancel1 %}{{data[9].auto_cancel_s}}{% endblock %}
+{% block fair_acancel2 %}{{data[9].auto_cancel_e}}{% endblock %}
+{% block fair_notes %}{{data[9].notes}}{% endblock %}
+
+{% block bair_start %}{{data[10].start}}{% endblock %}
+{% block bair_active1 %}{{data[10].start}}{% endblock %}{% block bair_active2 %}{{data[10].end}}{% endblock %}
+{% block bair_total %}{{data[10].total}}{% endblock %}
+{% block bair_stun %}{{data[10].stun}}{% endblock %}
+{% block bair_percent %}{{data[10].percent}}{% endblock %}{% block bair_wpercent %}{{data[10].percent_weak}}{% endblock %}
+{% block bair_lag %}{{data[10].land_lag}}{% endblock %}
+{% block bair_lcancel %}{{data[10].cancel_lag}}{% endblock %}
+{% block bair_acancel1 %}{{data[10].auto_cancel_s}}{% endblock %}
+{% block bair_acancel2 %}{{data[10].auto_cancel_e}}{% endblock %}
+{% block bair_notes %}{{data[10].notes}}{% endblock %}
+
+{% block uair_start %}{{data[11].start}}{% endblock %}
+{% block uair_active1 %}{{data[11].start}}{% endblock %}{% block uair_active2 %}{{data[11].end}}{% endblock %}
+{% block uair_total %}{{data[11].total}}{% endblock %}
+{% block uair_stun %}{{data[11].stun}}{% endblock %}
+{% block uair_percent %}{{data[11].percent}}{% endblock %}{% block uair_wpercent %}{{data[11].percent_weak}}{% endblock %}
+{% block uair_lag %}{{data[11].land_lag}}{% endblock %}
+{% block uair_lcancel %}{{data[11].cancel_lag}}{% endblock %}
+{% block uair_acancel1 %}{{data[11].auto_cancel_s}}{% endblock %}
+{% block uair_acancel2 %}{{data[11].auto_cancel_e}}{% endblock %}
+{% block uair_notes %}{{data[11].notes}}{% endblock %}
+
+{% block dair_start %}{{data[12].start}}{% endblock %}
+{% block dair_active1 %}{{data[12].start}}{% endblock %}{% block dair_active2 %}{{data[12].end}}{% endblock %}
+{% block dair_total %}{{data[12].total}}{% endblock %}
+{% block dair_stun %}{{data[12].stun}}{% endblock %}
+{% block dair_percent %}{{data[12].percent}}{% endblock %}{% block dair_wpercent %}{{data[12].percent_weak}}{% endblock %}
+{% block dair_lag %}{{data[12].land_lag}}{% endblock %}
+{% block dair_lcancel %}{{data[12].cancel_lag}}{% endblock %}
+{% block dair_acancel1 %}{{data[12].auto_cancel_s}}{% endblock %}
+{% block dair_acancel2 %}{{data[12].auto_cancel_e}}{% endblock %}
+{% block dair_notes %}{{data[12].notes}}{% endblock %}
+
+
+
+
+{% block neutralb_start %}{{data[13].start}}{% endblock %}
+{% block neutralb_active1 %}{{data[13].start}}{% endblock %}{% block neutralb_active2 %}{{data[13].end}}{% endblock %}
+{% block neutralb_total %}{{data[13].total}}{% endblock %}
+{% block neutralb_stun %}{{data[13].stun}}{% endblock %}
+{% block neutralb_percent %}{{data[13].percent}}{% endblock %}
+{% block neutralb_lag %}{{data[13].land_lag}}{% endblock %}
+{% block neutralb_notes %}{{data[13].notes}}{% endblock %}
+
+{% block aneutralb_start %}{{data[31].start}}{% endblock %}
+{% block aneutralb_active1 %}{{data[31].start}}{% endblock %}{% block aneutralb_active2 %}{{data[13].end}}{% endblock %}
+{% block aneutralb_total %}{{data[31].total}}{% endblock %}
+{% block aneutralb_stun %}{{data[31].stun}}{% endblock %}
+{% block aneutralb_percent %}{{data[31].percent}}{% endblock %}
+{% block aneutralb_lag %}{{data[31].land_lag}}{% endblock %}
+{% block aneutralb_ld_fl_spec %}{{data[31].ld_fl_spec}}{% endblock %}
+{% block aneutralb_notes %}{{data[31].notes}}{% endblock %}
+
+{% block sideb_start %}{{data[14].start}}{% endblock %}
+{% block sideb_active1 %}{{data[14].start}}{% endblock %}{% block sideb_active2 %}{{data[14].end}}{% endblock %}
+{% block sideb_total %}{{data[14].total}}{% endblock %}
+{% block sideb_stun %}{{data[14].stun}}{% endblock %}
+{% block sideb_percent %}{{data[14].percent}}{% endblock %}%
+{% block sideb_lag %}{{data[14].land_lag}}{% endblock %}
+{% block sideb_notes %}{{data[14].notes}}{% endblock %}
+
+{% block asideb_start %}{{data[32].start}}{% endblock %}
+{% block asideb_active1 %}{{data[32].start}}{% endblock %}{% block asideb_active2 %}{{data[32].end}}{% endblock %}
+{% block asideb_total %}{{data[32].total}}{% endblock %}
+{% block asideb_stun %}{{data[32].stun}}{% endblock %}
+{% block asideb_percent %}{{data[32].percent}}{% endblock %}%
+{% block asideb_lag %}{{data[32].land_lag}}{% endblock %}
+{% block asideb_ld_fl_spec %}{{data[32].ld_fl_spec}}{% endblock %}
+{% block asideb_notes %}{{data[32].notes}}{% endblock %}
+
+{% block upb_start %}{{data[15].start}}{% endblock %}
+{% block upb_active1 %}{{data[15].start}}{% endblock %}{% block upb_active2 %}{{data[15].end}}{% endblock %}
+{% block upb_total %}{{data[15].total}}{% endblock %}
+{% block upb_stun %}{{data[15].stun}}{% endblock %}
+{% block upb_percent %}{{data[15].percent}}{% endblock %}
+{% block upb_lag %}{{data[15].land_lag}}{% endblock %}
+{% block upb_notes %}{{data[15].notes}}{% endblock %}
+
+{% block aupb_start %}{{data[33].start}}{% endblock %}
+{% block aupb_active1 %}{{data[33].start}}{% endblock %}{% block aupb_active2 %}{{data[33].end}}{% endblock %}
+{% block aupb_total %}{{data[33].total}}{% endblock %}
+{% block aupb_stun %}{{data[33].stun}}{% endblock %}
+{% block aupb_percent %}{{data[33].percent}}{% endblock %}
+{% block aupb_lag %}{{data[33].land_lag}}{% endblock %}
+{% block aupb_ld_fl_spec %}{{data[33].ld_fl_spec}}{% endblock %}
+{% block aupb_notes %}{{data[33].notes}}{% endblock %}
+
+{% block downb_start %}{{data[16].start}}{% endblock %}
+{% block downb_active1 %}{{data[16].start}}{% endblock %}{% block downb_active2 %}{{data[16].end}}{% endblock %}
+{% block downb_total %}{{data[16].total}}{% endblock %}
+{% block downb_stun %}{{data[16].stun}}{% endblock %}
+{% block downb_percent %}{{data[16].percent}}{% endblock %}%
+{% block downb_lag %}{{data[16].land_lag}}{% endblock %}
+{% block downb_notes %}{{data[16].notes}}{% endblock %}
+
+{% block adownb_start %}{{data[34].start}}{% endblock %}
+{% block adownb_active1 %}{{data[34].start}}{% endblock %}{% block adownb_active2 %}{{data[34].end}}{% endblock %}
+{% block adownb_total %}{{data[34].total}}{% endblock %}
+{% block adownb_stun %}{{data[34].stun}}{% endblock %}
+{% block adownb_percent %}{{data[34].percent}}{% endblock %}
+{% block adownb_lag %}{{data[34].land_lag}}{% endblock %}
+{% block adownb_ld_fl_spec %}{{data[34].ld_fl_spec}}{% endblock %}
+{% block adownb_notes %}{{data[34].notes}}{% endblock %}
+
+
+
+{% block grab_start %}{{data[17].start}}{% endblock %}
+{% block grab_total %}{{data[17].total}}{% endblock %}
+{% block grab_notes %}{{data[17].notes}}{% endblock %}
+
+{% block dgrab_start %}{{data[18].start}}{% endblock %}
+{% block dgrab_total %}{{data[18].total}}{% endblock %}
+{% block dgrab_notes %}{{data[18].notes}}{% endblock %}
+
+{% block pgrab_start %}{{data[19].start}}{% endblock %}
+{% block pgrab_total %}{{data[19].total}}{% endblock %}
+{% block prab_notes %}{{data[19].notes}}{% endblock %}
+
+{% block fthrow_start %}{{data[20].start}}{% endblock %}
+{% block fthrow_active1 %}{{data[20].start}}{% endblock %}{% block fthrow_active2 %}{{data[20].end}}{% endblock %}
+{% block fthrow_total %}{{data[20].total}}{% endblock %}
+{% block fthrow_damage %}{{data[20].percent}}{% endblock %}
+{% block fthrow_notes %}{{data[20].notes}}{% endblock %}
+
+{% block bthrow_start %}{{data[21].start}}{% endblock %}
+{% block bthrow_active1 %}{{data[21].start}}{% endblock %}{% block bthrow_active2 %}{{data[21].end}}{% endblock %}
+{% block bthrow_total %}{{data[21].total}}{% endblock %}
+{% block bthrow_damage %}{{data[21].percent}}{% endblock %}
+{% block bthrow_notes %}{{data[21].notes}}{% endblock %}
+
+{% block dthrow_start %}{{data[22].start}}{% endblock %}
+{% block dthrow_active1 %}{{data[22].start}}{% endblock %}{% block dthrow_active2 %}{{data[22].end}}{% endblock %}
+{% block dthrow_total %}{{data[22].total}}{% endblock %}
+{% block dthrow_damage %}{{data[22].percent}}{% endblock %}
+{% block dthrow_notes %}{{data[22].notes}}{% endblock %}
+
+{% block uthrow_start %}{{data[23].start}}{% endblock %}
+{% block uthrow_active1 %}{{data[23].start}}{% endblock %}{% block uthrow_active2 %}{{data[23].end}}{% endblock %}
+{% block uthrow_total %}{{data[23].total}}{% endblock %}
+{% block uthrow_damage %}{{data[23].percent}}{% endblock %}
+{% block uthrow_notes %}{{data[23].notes}}{% endblock %}
+
+
+
+{% block spotdoge_start %}{{data[24].start}}{% endblock %}
+{% block spotdodge_inv %}{{data[24].inv_end}}{% endblock %}
+{% block spotdodge_total %}{{data[24].total}}{% endblock %}
+{% block spotdodge_notes %}{{data[24].notes}}{% endblock %}
+
+{% block broll_start %}{{data[25].start}}{% endblock %}
+{% block broll_inv %}{{data[25].inv_end}}{% endblock %}
+{% block broll_total %}{{data[25].total}}{% endblock %}
+{% block broll_notes %}{{data[25].notes}}{% endblock %}
+
+{% block froll_start %}{{data[26].start}}{% endblock %}
+{% block froll_inv %}{{data[26].inv_end}}{% endblock %}
+{% block froll_total %}{{data[26].total}}{% endblock %}
+{% block froll_notes %}{{data[26].notes}}{% endblock %}
+
+{% block airdodge_start %}
+{% if name == "BOWSER" %}{{data[27].start}}{% else %}4{% endif %}{% endblock %}
+{% block airdodge_inv %}{% if data[27].inv_end %}{{data[27].inv_end}}{% else %}29{% endif %}{% endblock %}
+{% block airdodge_total %}{{data[27].total}}{% endblock %}
+{% block airdodge_ld_fl_spec %}10{% endblock %}
+{% block airdodge_notes %}{{data[27].notes}}{% endblock %}
+
+
+
+{% block weight %}{{data[35].weight}}{% endblock %}
+{% block gravity %}{{data[35].gravity}}{% endblock %}
+{% block dash_speed %}{{data[35].walk_speed}}{% endblock %}
+{% block run_speed %}{{data[35].run_speed}}{% endblock %}
+{% block wd_length %}{{data[35].wd_length}}{% endblock %}
+{% block wd_frames %}{{data[35].wd_frames}}{% endblock %}
+{% block jump_squat %}{{data[35].jump_squat}}{% endblock %}
+{% block wall_jump %}
+{% if data[35].wall_jump %}Yes{% elif data[35].weight %}No{% else %} {% endif %}
+{% endblock %}

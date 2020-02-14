@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel='stylesheet' href= {% block style %}{% endblock %}>
+</head>
+<body>
+
+<center>
+
+<div class='header'>{% block character %}{% endblock %}</div>
+<div class='head_bot'>
+{% if box == "Y" %}
+<form action="#" method="post" class="spacing">
+	<p><input type="submit" name="submit_button" value=" Toggle Hitboxes Off " class="hits"/></p>
+</form>
+{% endif %}
+{% if box == "N" %}
+<form action="#" method="post" class="spacing">
+	<p><input type="submit" name="submit_button" value=" Toggle Hitboxes On " class="hits"/></p>
+</form>
+{% endif %}
+<img src="{% block image %}{% endblock %}" class="char-pic">
+<form action="#" method="post" class="spacing">
+	<p><input type="submit" name="submit_button" value=" Select Another Character " class="go_back"/></p>
+</form>
+</div>
+<div class='move-group'>Ground Attacks</div>
+<div class='stat-container'>
+	<div class='move-container'>
+		<div class='movename'>Jab</div>
+		<div class='hitbox'><img src="{% block gif_jab1 %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block jab1_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block jab1_active1 %}{% endblock %}-{% block jab1_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block jab1_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block jab1_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block jab1_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block jab1_percent %}{% endblock %}
+			{% if data[0].percent_weak %}/ {% block jab1_wpercent %}{% endblock %}{% endif %}% Base Damage</div>
+		{% if data[0].notes %} <div class='notes'>Notes - {% block jab1_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% if data[28].start %}
+	<div class='move-container'>
+		<div class='movename'>Jab 2</div>
+		<div class='hitbox'><img src="{% block gif_jab2 %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block jab2_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block jab2_active1 %}{% endblock %}-{% block jab2_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block jab2_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block jab2_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block jab2_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block jab2_percent %}{% endblock %}
+			{% if data[28].percent_weak %}/ {% block jab2_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[28].notes %} <div class='notes'>Notes - {% block jab2_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	{% if data[29].start %}
+	<div class='move-container'>
+		<div class='movename'>Jab 3</div>
+		<div class='hitbox'><img src="{% block gif_jab3 %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block jab3_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block jab3_active1 %}{% endblock %}-{% block jab3_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block jab3_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block jab3_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block jab3_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block jab3_percent %}{% endblock %}
+			{% if data[29].percent_weak %}/ {% block jab3_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[29].notes %} <div class='notes'>Notes - {% block jab3_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	{% if data[30].start %}
+	<div class='move-container'>
+		<div class='movename'>Rapid Jab</div>
+		<div class='hitbox'><img src="{% block gif_jabr %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block jabr_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block jabr_active1 %}{% endblock %}-{% block jabr_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block jabr_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block jabr_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block jabr_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block jabr_percent %}{% endblock %}
+			{% if data[30].percent_weak %}/ {% block jabr_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[30].notes %} <div class='notes'>Notes - {% block jabr_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	<div class='move-container'>
+		<div class='movename'>Forward Tilt</div>
+		<div class='hitbox'><img src="{% block gif_ftilt %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block ftilt_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block ftilt_active1 %}{% endblock %}-{% block ftilt_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block ftilt_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block ftilt_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block ftilt_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block ftilt_percent %}{% endblock %}
+			{% if data[1].percent_weak %}/ {% block ftilt_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[1].notes %} <div class='notes'>Notes - {% block ftilt_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Up Tilt</div>
+		<div class='hitbox'><img src="{% block gif_utilt %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block utilt_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block utilt_active1 %}{% endblock %}-{% block utilt_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block utilt_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block utilt_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block utilt_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block utilt_percent %}{% endblock %}
+			{% if data[2].percent_weak %}/ {% block utilt_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[2].notes %} <div class='notes'>Notes - {% block utilt_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Down Tilt</div>
+		<div class='hitbox'><img src="{% block gif_dtilt %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block dtilt_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block dtilt_active1 %}{% endblock %}-{% block dtilt_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block dtilt_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block dtilt_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block dtilt_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block dtilt_percent %}{% endblock %}
+			{% if data[3].percent_weak %}/ {% block dtilt_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[3].notes %} <div class='notes'>Notes - {% block dtilt_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Dash Attack</div>
+		<div class='hitbox'><img src="{% block gif_dattack %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block dash_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block dash_active1 %}{% endblock %}-{% block dash_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block dash_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block dash_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block dash_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block dash_percent %}{% endblock %}
+			{% if data[4].percent_weak %}/ {% block dash_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[4].notes %} <div class='notes'>Notes - {% block dash_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Forward Smash</div>
+		<div class='hitbox'><img src="{% block gif_fsmash %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block fsmash_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block fsmash_active1 %}{% endblock %}-{% block fsmash_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block fsmash_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block fsmash_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block fsmash_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block fsmash_percent %}{% endblock %}
+			{% if data[5].percent_weak %}/ {% block fsmash_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[5].notes %} <div class='notes'>Notes - {% block fsmash_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Up Smash</div>
+		<div class='hitbox'><img src="{% block gif_usmash %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block usmash_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block usmash_active1 %}{% endblock %}-{% block usmash_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block usmash_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block usmash_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block usmash_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block usmash_percent %}{% endblock %}
+			{% if data[6].percent_weak %}/ {% block usmash_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[6].notes %} <div class='notes'>Notes - {% block usmash_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='move-container'>
+		<div class='movename'>Down Smash</div>
+		<div class='hitbox'><img src="{% block gif_dsmash %}{% endblock %}" class="gif"></div>
+		<div class='startup'>{% block dsmash_start %}{% endblock %} Frame Startup</div>
+		<div class='active-frames'>Active Frames {% block dsmash_active1 %}{% endblock %}-{% block dsmash_active2 %}{% endblock %}</div>
+		<div class='total-frames'>{% block dsmash_total %}{% endblock %} Total Frames</div>
+		<div class='iasa'>IASA {% block dsmash_iasa %}{% endblock %}</div>
+		<div class="shield-stun">Shield Stun {% block dsmash_stun %}{% endblock %} Frames</div>
+		<div class='percent'>{% block dsmash_percent %}{% endblock %}
+			{% if data[7].percent_weak %}/ {% block dsmash_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		{% if data[7].notes %} <div class='notes'>Notes - {% block dsmash_notes %}{% endblock %}</div> {% endif %}
+	</div>	
+</div>
+<div class='move-group'>Aerial Attacks</div>
+<div class='stat-container'>
+	<div class='air-move-container'>
+		<div class='air-movename'>Neutral Air</div>
+		<div class='hitbox'><img src="{% block gif_nair %}{% endblock %}" class="gif"></div>
+		<div class='air-startup'>{% block nair_start %}{% endblock %} Frame Startup</div>
+		<div class='air-active-frames'>Active Frames {% block nair_active1 %}{% endblock %}-{% block nair_active2 %}{% endblock %}</div>
+		<div class='air-total-frames'>{% block nair_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block nair_stun %}{% endblock %} Frames</div>
+		<div class='air-percent'>{% block nair_percent %}{% endblock %}
+			{% if data[8].percent_weak %}/ {% block nair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		<div class='air-landing-lag'>{% block nair_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='air-l-cancel-lag'>{% block nair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-acancel'>Won't Auto Cancel Frames {% block nair_acancel1 %}{% endblock %}-{% block nair_acancel2 %}{% endblock %}</div>
+		{% if data[8].notes %} <div class='notes'>Notes - {% block nair_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='air-move-container'>
+		<div class='air-movename'>Forward Air</div>
+		<div class='hitbox'><img src="{% block gif_fair %}{% endblock %}" class="gif"></div>
+		<div class='air-startup'>{% block fair_start %}{% endblock %} Frame Startup</div>
+		<div class='air-active-frames'>Active Frames {% block fair_active1 %}{% endblock %}-{% block fair_active2 %}{% endblock %}</div>
+		<div class='air-total-frames'>{% block fair_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block fair_stun %}{% endblock %} Frames</div>
+		<div class='air-percent'>{% block fair_percent %}{% endblock %}
+			{% if data[9].percent_weak %}/ {% block fair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		<div class='air-landing-lag'>{% block fair_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='air-l-cancel-lag'>{% block fair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-acancel'>Won't Auto Cancel Frames {% block fair_acancel1 %}{% endblock %}-{% block fair_acancel2 %}{% endblock %}</div>
+		{% if data[9].notes %} <div class='notes'>Notes - {% block fair_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='air-move-container'>
+		<div class='air-movename'>Back Air</div>
+		<div class='hitbox'><img src="{% block gif_bair %}{% endblock %}" class="gif"></div>
+		<div class='air-startup'>{% block bair_start %}{% endblock %} Frame Startup</div>
+		<div class='air-active-frames'>Active Frames {% block bair_active1 %}{% endblock %}-{% block bair_active2 %}{% endblock %}</div>
+		<div class='air-total-frames'>{% block bair_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block bair_stun %}{% endblock %} Frames</div>
+		<div class='air-percent'>{% block bair_percent %}{% endblock %}
+			{% if data[10].percent_weak %}/ {% block bair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		<div class='air-landing-lag'>{% block bair_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='air-l-cancel-lag'>{% block bair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-acancel'>Won't Auto Cancel Frames {% block bair_acancel1 %}{% endblock %}-{% block bair_acancel2 %}{% endblock %}</div>
+		{% if data[10].notes %} <div class='notes'>Notes - {% block bair_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='air-move-container'>
+		<div class='air-movename'>Up Air</div>
+		<div class='hitbox'><img src="{% block gif_uair %}{% endblock %}" class="gif"></div>
+		<div class='air-startup'>{% block uair_start %}{% endblock %} Frame Startup</div>
+		<div class='air-active-frames'>Active Frames {% block uair_active1 %}{% endblock %}-{% block uair_active2 %}{% endblock %}</div>
+		<div class='air-total-frames'>{% block uair_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block uair_stun %}{% endblock %} Frames</div>
+		<div class='air-percent'>{% block uair_percent %}{% endblock %}
+			{% if data[11].percent_weak %}/ {% block uair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		<div class='air-landing-lag'>{% block uair_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='air-l-cancel-lag'>{% block uair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-acancel'>Won't Auto Cancel Frames {% block uair_acancel1 %}{% endblock %}-{% block uair_acancel2 %}{% endblock %}</div>
+		{% if data[11].notes %} <div class='notes'>Notes - {% block uair_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='air-move-container'>
+		<div class='air-movename'>Down Air</div>
+		<div class='hitbox'><img src="{% block gif_dair %}{% endblock %}" class="gif"></div>
+		<div class='air-startup'>{% block dair_start %}{% endblock %} Frame Startup</div>
+		<div class='air-active-frames'>Active Frames {% block dair_active1 %}{% endblock %}-{% block dair_active2 %}{% endblock %}</div>
+		<div class='air-total-frames'>{% block dair_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block dair_stun %}{% endblock %} Frames</div>
+		<div class='air-percent'>{% block dair_percent %}{% endblock %}
+			{% if data[12].percent_weak %}/ {% block dair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
+		<div class='air-landing-lag'>{% block dair_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='air-l-cancel-lag'>{% block dair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-acancel'>Won't Auto Cancel Frames {% block dair_acancel1 %}{% endblock %}-{% block dair_acancel2 %}{% endblock %}</div>
+		{% if data[12].notes %} <div class='notes'>Notes - {% block dair_notes %}{% endblock %}</div> {% endif %}
+	</div>
+</div>
+<div class='move-group'>Special Attacks</div>
+<div class='stat-container'>
+	<div class='special-move-container'>
+		<div class='special-movename'>Neutral B</div>
+		<div class='hitbox'><img src="{% block gif_neutralb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block neutralb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block neutralb_active1 %}{% endblock %}-{% block neutralb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block neutralb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block neutralb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block neutralb_percent %}{% endblock %}% Base Damage</div>
+		{% if data[13].notes %} <div class='notes'>Notes - {% block neutralb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% if data[31].start %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Aerial Neutral B</div>
+		<div class='hitbox'><img src="{% block gif_aneutralb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block aneutralb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block aneutralb_active1 %}{% endblock %}-{% block aneutralb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block aneutralb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block aneutralb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block aneutralb_percent %}{% endblock %}% Base Damage</div>
+		<div class='special-landing-lag'>{% block aneutralb_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='land-fall'>{% block aneutralb_ld_fl_spec %}{% endblock %} Frames LFS Lag</div>
+		{% if data[31].notes %} <div class='notes'>Notes - {% block aneutralb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Side B</div>
+		<div class='hitbox'><img src="{% block gif_sideb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block sideb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block sideb_active1 %}{% endblock %}-{% block sideb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block sideb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block sideb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block sideb_percent %}{% endblock %}% Base Damage</div>
+		{% if data[14].notes %} <div class='notes'>Notes - {% block sideb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% if data[32].start %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Aerial Side B</div>
+		<div class='hitbox'><img src="{% block gif_asideb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block asideb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block asideb_active1 %}{% endblock %}-{% block asideb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block asideb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block asideb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block asideb_percent %}{% endblock %}% Base Damage</div>
+		<div class='special-landing-lag'>{% block asideb_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='land-fall'>{% block asideb_ld_fl_spec %}{% endblock %} Frames LFS Lag</div>
+		{% if data[32].notes %} <div class='notes'>Notes - {% block asideb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Up B</div>
+		<div class='hitbox'><img src="{% block gif_upb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block upb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block upb_active1 %}{% endblock %}-{% block upb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block upb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block upb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block upb_percent %}{% endblock %}% Base Damage</div>
+		<div class='special-landing-lag'>{% block upb_lag %}{% endblock %} Frames Landing Lag</div>
+		{% if data[15].notes %} <div class='notes'>Notes - {% block upb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% if data[33].start %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Aerial Up B</div>
+		<div class='hitbox'><img src="{% block gif_aupb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block aupb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block aupb_active1 %}{% endblock %}-{% block aupb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block aupb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block aupb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block aupb_percent %}{% endblock %}% Base Damage</div>
+		<div class='special-landing-lag'>{% block aupb_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='land-fall'>{% block aupb_ld_fl_spec %}{% endblock %} Frames LFS Lag</div>
+		{% if data[33].notes %} <div class='notes'>Notes - {% block aupb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Down B</div>
+		<div class='hitbox'><img src="{% block gif_downb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block downb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block downb_active1 %}{% endblock %}-{% block downb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block downb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block downb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block downb_percent %}{% endblock %}% Base Damage</div>
+		{% if data[16].notes %} <div class='notes'>Notes - {% block downb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% if data[34].start %}
+	<div class='special-move-container'>
+		<div class='special-movename'>Aerial Down B</div>
+		<div class='hitbox'><img src="{% block gif_adownb %}{% endblock %}" class="gif"></div>
+		<div class='special-startup'>{% block adownb_start %}{% endblock %} Frame Startup</div>
+		<div class='special-active-frames'>Active Frames {% block adownb_active1 %}{% endblock %}-{% block adownb_active2 %}{% endblock %}</div>
+		<div class='special-total-frames'>{% block adownb_total %}{% endblock %} Total Frames</div>
+		<div class="shield-stun">Shield Stun {% block adownb_stun %}{% endblock %} Frames</div>
+		<div class='special-percent'>{% block adownb_percent %}{% endblock %}% Base Damage</div>
+		<div class='special-landing-lag'>{% block adownb_lag %}{% endblock %} Frames Landing Lag</div>
+		<div class='land-fall'>{% block adownb_ld_fl_spec %}{% endblock %} Frames LFS Lag</div>
+		{% if data[34].notes %} <div class='notes'>Notes - {% block adownb_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	{% endif %}
+</div>
+<div class='move-group'>Grabs</div>
+<div class='stat-container'>
+	<div class='grab-container'>
+		<div class='grab-movename'>Standing Grab</div>
+		<div class='hitbox'><img src="{% block gif_sgrab %}{% endblock %}" class="gif"></div>
+		<div class='grab-startup'>{% block grab_start %}{% endblock %} Frame Startup</div>
+		<div class='grab-total-frames'>{% block grab_total %}{% endblock %} Total Frames</div>
+		{% if data[17].notes %} <div class='notes'>Notes - {% block grab_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='grab-container'>
+		<div class='grab-movename'>Dash Grab</div>
+		<div class='hitbox'><img src="{% block gif_dgrab %}{% endblock %}" class="gif"></div>
+		<div class='grab-startup'>{% block dgrab_start %}{% endblock %} Frame Startup</div>
+		<div class='grab-total-frames'>{% block dgrab_total %}{% endblock %} Total Frames</div>
+		{% if data[18].notes %} <div class='notes'>Notes - {% block drgab_notes %}{% endblock %}</div> {% endif %}
+	</div>
+</div>
+<div class='move-group'>Throws</div>
+<div class='stat-container'>
+	<div class='throw-container'>
+		<div class='throw-movename'>Forward Throw</div>
+		{% if name == "MEWTWO" %}
+		<div class='hitbox'><img src="{% block gif_fthrow %}{% endblock %}" class="gif"></div>
+		{% endif %}
+		<div class='throw-startup'>{% block fthrow_start %}{% endblock %} Frame Startup</div>
+		<div class='throw-total-frames'>Active Frames {% block fthrow_active1 %}{% endblock %}-{% block fthrow_active2 %}{% endblock %}</div>
+		<div class='throw-total-frames'>{% block fthrow_total %}{% endblock %} Total Frames</div>
+		<div class='throw-percent'>{% block fthrow_damage %}{% endblock %}% Damage</div>
+		{% if data[20].notes %} <div class='notes'>Notes - {% block fthrow_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='throw-container'>
+		<div class='throw-movename'>Back Throw</div>
+		{% if name == "MEWTWO" %}
+		<div class='hitbox'><img src="{% block gif_bthrow %}{% endblock %}" class="gif"></div>
+		{% endif %}
+		<div class='throw-startup'>{% block bthrow_start %}{% endblock %} Frame Startup</div>
+		<div class='throw-total-frames'>Active Frames {% block bthrow_active1 %}{% endblock %}-{% block bthrow_active2 %}{% endblock %}</div>
+		<div class='throw-total-frames'>{% block bthrow_total %}{% endblock %} Total Frames</div>
+		<div class='throw-percent'>{% block bthrow_damage %}{% endblock %}% Damage</div>
+		{% if data[21].notes %} <div class='notes'>Notes - {% block bthrow_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='throw-container'>
+		<div class='throw-movename'>Down Throw</div>
+		{% if name == "MEWTWO" %}
+		<div class='hitbox'><img src="{% block gif_dthrow %}{% endblock %}" class="gif"></div>
+		{% endif %}
+		<div class='throw-startup'>{% block dthrow_start %}{% endblock %} Frame Startup</div>
+		<div class='throw-total-frames'>Active Frames {% block dthrow_active1 %}{% endblock %}-{% block dthrow_active2 %}{% endblock %}</div>
+		<div class='throw-total-frames'>{% block dthrow_total %}{% endblock %} Total Frames</div>
+		<div class='throw-percent'>{% block dthrow_damage %}{% endblock %}% Damage</div>
+		{% if data[22].notes %} <div class='notes'>Notes - {% block dthrow_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='throw-container'>
+		<div class='throw-movename'>Up Throw</div>
+		{% if name == "MEWTWO" %}
+		<div class='hitbox'><img src="{% block gif_uthrow %}{% endblock %}" class="gif"></div>
+		{% endif %}
+		<div class='throw-startup'>{% block uthrow_start %}{% endblock %} Frame Startup</div>
+		<div class='throw-total-frames'>Active Frames {% block uthrow_active1 %}{% endblock %}-{% block uthrow_active2 %}{% endblock %}</div>
+		<div class='throw-total-frames'>{% block uthrow_total %}{% endblock %} Total Frames</div>
+		<div class='throw-percent'>{% block uthrow_damage %}{% endblock %}% Damage</div>
+		{% if data[23].notes %} <div class='notes'>Notes - {% block uthrow_notes %}{% endblock %}</div> {% endif %}
+	</div>
+</div>
+<div class='move-group'>Dodges/Rolls</div>
+<div class='stat-container'>
+	<div class='dodge-container'>
+		<div class='dodge-movename'>Spot Dodge</div>
+		<div class='hitbox'><img src="{% block gif_sdodge %}{% endblock %}" class="gif"></div>
+		<div class='dodge-startup'>{% block spotdoge_start %}{% endblock %} Frame Startup</div>
+		<div class='dodge-inv-frames'>{% block spotdodge_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-total-frames'>{% block spotdodge_total %}{% endblock %} Total Frames</div>
+		{% if data[24].notes %} <div class='notes'>Notes - {% block spotdodge_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='dodge-container'>
+		<div class='dodge-movename'>Backward Roll</div>
+		<div class='hitbox'><img src="{% block gif_broll %}{% endblock %}" class="gif"></div>
+		<div class='dodge-startup'>{% block broll_start %}{% endblock %} Frame Startup</div>
+		<div class='dodge-inv-frames'>{% block broll_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-total-frames'>{% block broll_total %}{% endblock %} Total Frames</div>
+		{% if data[25].notes %} <div class='notes'>Notes - {% block broll_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='dodge-container'>
+		<div class='dodge-movename'>Forward Roll</div>
+		<div class='hitbox'><img src="{% block gif_froll %}{% endblock %}" class="gif"></div>
+		<div class='dodge-startup'>{% block froll_start %}{% endblock %} Frame Startup</div>
+		<div class='dodge-inv-frames'>{% block froll_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-total-frames'>{% block froll_total %}{% endblock %} Total Frames</div>
+		{% if data[26].notes %} <div class='notes'>Notes - {% block froll_notes %}{% endblock %}</div> {% endif %}
+	</div>
+	<div class='dodge-container'>
+		<div class='dodge-movename'>Air Dodge</div>
+		<div class='hitbox'><img src="{% block gif_adodge %}{% endblock %}" class="gif"></div>
+		<div class='dodge-startup'>{% block airdodge_start %}{% endblock %} Frame Startup</div>
+		<div class='dodge-inv-frames'>Inv. Ends Frame {% block airdodge_inv %}{% endblock %}</div>
+		<div class='dodge-total-frames'>{% block airdodge_total %}{% endblock %} Total Frames</div>
+		<div class='land-fall'>Landing Fall Special Lag: {% block airdodge_ld_fl_spec %}{% endblock %} Frames</div>
+		{% if data[27].notes %} <div class='notes'>Notes - {% block airdodge_notes %}{% endblock %}</div> {% endif %}
+	</div>
+</div>
+<div class='move-group'>Misc Info</div>
+<div class='stat-container'>
+	<div class='move-container'>
+		<div class='misc-info'>Weight: {% block weight %}{% endblock %}</div>
+		<div class='misc-info'>Gravity: {% block gravity %}{% endblock %}</div>
+		<div class='misc-info'>Dash Speed: {% block dash_speed %}{% endblock %}</div>
+		<div class='misc-info'>Run Speed: {% block run_speed %}{% endblock %}</div>
+		<div class='misc-info'>Wavedash Length: {% block wd_length %}{% endblock %}</div>
+		<div class='misc-info'>PLA Intangibility Frames: {% block wd_frames %}{% endblock %}</div>
+		<div class='misc-info'>Jump Squat: {% block jump_squat %}{% endblock %}</div>
+		<div class='misc-info'>Wall Jump: {% block wall_jump %}{% endblock %}</div>
+	</div>
+</div>
+
+</center>
+</body>
+</html>

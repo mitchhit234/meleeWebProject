@@ -1,0 +1,146 @@
+*{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.header{
+	font-size: 300%;
+	font-family: Verdana;
+	font-weight: bold;
+	background-color: #ffe524;
+	color: #fcfcfc;	
+	margin-bottom: 1%;
+	height: 12vh;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+.title{
+	max-width: 99%;
+	max-height: 99%;
+}
+
+.head_bot{
+	position: relative;
+	height: 20vh;
+	margin-bottom: 1%;
+}
+
+.gif{
+	display: none;
+}
+
+.go_back, .hits{
+	margin: 0;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	-ms-transform: translate(50%, -50%);
+	transform: translate(50%, -50%);
+	-webkit-text-stroke: 1px black;
+	font-weight: bold;
+	background-color: #3c647d;
+	color: #fcfcfc;
+	font-family: Verdana, fantasy;
+	font-size: 150%;
+	border-radius: 2%;
+}
+
+.hits{
+	-ms-transform: translate(-180%, -50%);
+	transform: translate(-180%, -50%);
+	background-color: #33ff36;
+}
+
+.go_back:hover, .hits:hover{
+	background-color: #ffe524;
+}
+
+.char-pic{
+	margin-bottom: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	border-style: solid;
+	border-radius: 10px;
+	border-color: white;
+	background: -webkit-linear-gradient(#00c0ff, #00994d);
+	height: 100%;
+}
+.stat-container{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.move-group{
+	background: #00c0ff;
+	color: #fcfcfc;
+	justify-content: center;
+	font-size: 300%;
+	-webkit-text-stroke: 1px black;
+	font-weight: bold;
+
+}
+.move-container, .air-move-container, .special-move-container, .grab-container, .throw-container, .dodge-container{
+	width: 22%;
+	text-align: left;
+	margin: 1.5%;
+	color: #fcfcfc;
+	
+}
+.movename, .air-movename, .special-movename, .grab-movename, .throw-movename, .dodge-movename{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background: #00994d;
+    order: 1;
+    font-size: 175%;
+    font-weight: bold;
+    border: 0px;
+    word-break: break-word;
+    height: 8vh;
+    text-align: center;
+}
+.startup, .air-startup, .special-startup, .grab-startup, .throw-startup, .dodge-startup{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	background: #3c647d;
+    order: 1;
+    font-size: 150%;
+    font-weight: bold;
+    border: 0px;
+    word-break: break-word;
+    height: 6vh;
+    text-align: center;
+}
+.active-frames, .total-frames, .percent, .air-active-frames, .special-active-frames, 
+.air-total-frames, .special-total-frames, .grab-total-frames, .throw-total-frames, .dodge-total-frames,
+.air-percent, .special-percent, .throw-percent, .dodge-inv-frames, .air-landing-lag,
+.air-l-cancel-lag, .special-landing-lag, .notes, .air-acancel, .land-fall, .shield-stun, .iasa{
+	border: 1px solid #00c0ff;
+	font-size: 125%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #000000;
+	text-align: center;
+	min-height: 4vh;
+	max-height: 12vh;
+}
+.notes{
+	font-size: 100%;
+}
+
+.misc-info{
+	font-size: 150%;
+	color: #000000;
+	margin: 10px;
+}

@@ -1,0 +1,249 @@
+<head>
+  <title>Admin Page</title>
+  <style>
+      .container {
+        display: flex;
+      }
+      .container > div {
+        flex: 1; /*grow*/
+      }
+  </style>
+</head>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Normals</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Move Name</p>
+            <p>
+                <select name="move">
+                    <option value="jab1">Jab 1</option>
+                    <option value="jab2">Jab 2</option>
+                    <option value="jab3">Jab 3</option>
+                    <option value="rjab">Rapid Jab</option>
+                    <option value="ftilt">Forward Tilt</option>
+                    <option value="utilt">Up Tilt</option>
+                    <option value="dtilt">Down Tilt</option>
+                    <option value="dattack">Dash Attack </option>
+                    <option value="fsmash">Forward Smash</option>
+                    <option value="usmash">Up Smash</option>
+                    <option value="dsmash">Down Smash</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Active End</p>
+            <p><input type="text" name="active_end" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>IASA Frame</p>
+            <p><input type="text" name="iasa" /></p>
+            <p>Shield Stun</p>
+            <p><input type="text" name="stun" /></p>
+            <p>Percent Damage</p>
+            <p><input type="text" name="percent" /></p>
+            <p>Percent Damage (Weak Hit)</p>
+            <p><input type="text" name="w_per" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Normal" /></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Aerials</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Move Name</p>
+            <p>
+                <select name="move">
+                    <option value="nair">Neutral Air</option>
+                    <option value="fair">Forward Air</option>
+                    <option value="bair">Back Air</option>
+                    <option value="uair">Up Air</option>
+                    <option value="dair">Down Air</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Active End</p>
+            <p><input type="text" name="active_end" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>IASA Frame</p>
+            <p><input type="text" name="iasa" /></p>
+            <p>Shield Stun</p>
+            <p><input type="text" name="stun" /></p>
+            <p>Landing Lag</p>
+            <p><input type="text" name="lag" /></p>
+            <p>Auto Cancel Start</p>
+            <p><input type="text" name="aos" /></p>
+            <p>Auto Cancel End</p>
+            <p><input type="text" name="aoe" /></p>
+            <p>Percent Damage</p>
+            <p><input type="text" name="percent" /></p>
+            <p>Percent Damage (Weak Hit)</p>
+            <p><input type="text" name="w_per" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Aerial" /></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Specials</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Move Direction</p>
+            <p>
+                <select name="move">
+                    <option value="neutral_b">Neutral</option>
+                    <option value="up_b">Up</option>
+                    <option value="side_b">Side</option>
+                    <option value="down_b">Down</option>
+                    <option value="aneutral_b">Aerial Neutral</option>
+                    <option value="aup_b">Aerial Up</option>
+                    <option value="aside_b">Aerial Side</option>
+                    <option value="adown_b">Aerial Down</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Active End</p>
+            <p><input type="text" name="active_end" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>IASA Frame</p>
+            <p><input type="text" name="iasa" /></p>
+            <p>Shield Stun</p>
+            <p><input type="text" name="stun" /></p>
+            <p>Landing Lag</p>
+            <p><input type="text" name="lag" /></p>
+            <p>Landing Fall Special</p>
+            <p><input type="text" name="land_fall" /></p>
+            <p>Percent Damage</p>
+            <p><input type="text" name="percent" /></p>
+            <p>Percent Damage (Weak Hit)</p>
+            <p><input type="text" name="w_per" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Special" /></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Grabs</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Grab Type</p>
+            <p>
+                <select name="move">
+                    <option value="standing_grab">Standing</option>
+                    <option value="dash_grab">Dash</option>
+                    <option value="pivot_grab">Pivot</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Grab" /></p>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Throws</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Throw Type</p>
+            <p><select name="move">
+                    <option value="forward_throw">Forward</option>
+                    <option value="back_throw">Back</option>
+                    <option value="down_throw">Down</option>
+                    <option value="up_throw">Up</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Active End</p>
+            <p><input type="text" name="active_end" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>Percent Damage</p>
+            <p><input type="text" name="percent" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Throw" /></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Dodges/Rolls</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Dodge Name</p>
+            <p>
+                <select name="move">
+                    <option value="spot_dodge">Spot dodge</option>
+                    <option value="air_dodge">Air dodge</option>
+                    <option value="back_roll">Backwards Roll</option>
+                    <option value="forward_roll">Forward Roll</option>
+                </select>
+            </p>
+            <p>Startup</p>
+            <p><input type="text" name="start" /></p>
+            <p>Invulnerable End</p>
+            <p><input type="text" name="active_end" /></p>
+            <p>Total Frames</p>
+            <p><input type="text" name="total" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Dodge" /></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="post">
+            <h1>Misc</h1>
+            <p>Character</p>
+            <p><input type="text" name="char" /></p>
+            <p>Weight</p>
+            <p><input type="text" name="wght" /></p>
+            <p>Gravity</p>
+            <p><input type="text" name="grav" /></p>
+            <p>Dash Speed</p>
+            <p><input type="text" name="dash_spd" /></p>
+            <p>Run Speed</p>
+            <p><input type="text" name="run_spd" /></p>
+            <p>Wave Dash Length</p>
+            <p><input type="text" name="wd_length" /></p>
+            <p>Perfect Ledge Dash Frames</p>
+            <p><input type="text" name="wd_frames" /></p>
+            <p>Jump Squat</p>
+            <p><input type="text" name="jump_sqt" /></p>
+            <p>Wall Jump</p>
+            <p><input type="text" name="wall_jp" /></p>
+            <p>Notes</p>
+            <p><input type="text" name="notes" /></p>
+            <p><input type="submit" name="sub" value="Submit Misc" /></p>
+        </form>
+    </div>
+</div>

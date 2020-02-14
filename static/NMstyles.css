@@ -1,0 +1,145 @@
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+.header{
+	font-size: 600%;
+	font-family: Verdana;
+	font-weight: bold;
+	background-color: #ffe524;
+	color: #fcfcfc;	
+	margin-bottom: 5%;
+	height: 12vh;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    -webkit-text-stroke: 2px black;
+}
+
+.char-pic{
+	object-fit: cover;
+	object-position: 100% 0;
+	width: 40%;
+	border-radius: 10px;
+	background: -webkit-linear-gradient(#00c0ff, #00994d);
+}
+
+.go_back, .hits{
+	font-size: 300%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	font-weight: bold;
+	background-color: #3c647d;
+	color: #fcfcfc;
+	font-family: Verdana, fantasy;
+	border-radius: 10px;
+}
+
+.hits{
+	background-color: #33ff36;
+}
+.go_back:hover, .hits:hover{
+	background-color: #ffe524;
+}
+
+.hitbox{
+	overflow: hidden;
+	border: 1px solid #00c0ff;
+}
+
+.gif{
+	display: none;
+}
+.stat-container{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.move-group{
+	margin: 40px 0px 0px 0px;
+	background: #00c0ff;
+	color: #fcfcfc;
+	display: flex;
+    align-items: center;
+	justify-content: center;
+	font-size: 700%;
+	-webkit-text-stroke: 3px black;
+	font-weight: bold;
+	height: 10vh;
+	overflow: hidden;
+    white-space: nowrap
+
+}
+.move-container, .air-move-container, .special-move-container, .grab-container, .throw-container, .dodge-container{
+	font-family: Georgia, serif;
+	margin: 50px 20px 50px 20px;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: 400%;
+	color: #fcfcfc;
+}
+
+
+.movename, .startup, .air-movename, .air-startup, .special-movename, .special-startup, 
+.grab-movename, .grab-startup, .throw-movename, .throw-startup, .dodge-movename, .dodge-startup{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 8vh;
+	background: #00994d;
+    font-weight: bold;
+    text-align: center;
+}
+.startup, .air-startup, .special-startup, .grab-startup, .throw-startup, .dodge-startup{
+	background: #3c647d;
+	text-align: center;
+}
+
+.active-frames, .total-frames, .percent, .air-active-frames, .air-total-frames, .air-percent, 
+.air-landing-lag, .air-l-cancel-lag, .special-active-frames, .special-total-frames, 
+.special-percent, .special-landing-lag, .grab-total-frames, .throw-percent, .throw-total-frames, 
+.dodge-inv-frames, .dodge-total-frames, .dodge-inv-frames, .dodge-total-frames, .notes, .air-acancel, 
+.land-fall, .shield-stun, .iasa{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	min-height: 8.33%;
+	max-height: 25%
+	border: 1px solid #00c0ff;
+	color: #000000;
+	text-align: center;
+}
+
+.notes{
+	font-size: 75%;
+}
+
+.special-active-frames, .special-total-frames, .special-percent, .special-landing-lag{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 9.1%;
+	border: 1px solid #00c0ff;
+	color: #000000;
+}
+
+.misc-container{
+	margin: 10px;
+}
+.misc-info{
+	font-family: Georgia, serif;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	font-size: 100%;
+	color: #000000;
+	margin: 15px;
+}

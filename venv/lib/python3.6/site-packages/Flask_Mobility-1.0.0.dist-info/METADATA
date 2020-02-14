@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Flask-Mobility
+Version: 1.0.0
+Summary: A Flask extension to simplify building mobile-friendly sites.
+Home-page: https://github.com/rehandalal/flask-mobility
+Author: Rehan Dalal
+Author-email: rehan@meet-rehan.com
+License: Mozilla Public License Version 2.0
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask
+
+
+A Flask extension to simplify building mobile-friendly sites.
+
+Full documentation is available at:
+http://flask-mobility.readthedocs.org/en/latest/
+
+

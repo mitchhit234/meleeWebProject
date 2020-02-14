@@ -1,0 +1,53 @@
+<style>
+	html{
+		background: url(static/images/thumb.jpg) no-repeat center center fixed; 
+  		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+  		font-family: Georgia, serif;
+	}
+	.spacing{
+		margin-right: 30%;
+	}
+	.logo{
+		width: 80%;
+	}
+	.desk, .mob{
+		border-radius: 10px;
+		font-size: 16vw;
+		background-color: #9c2bcc;
+		color: #fcfcfc;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+
+	}	
+	.desk:hover, .mob:hover{
+		border-color: #ffea00;
+    	opacity: 0.75;
+	}
+	@media (min-width: 1200px){
+		.desk, .mob{
+			font-size: 8vw;
+			margin-right: 0px;
+		}
+	}
+
+</style>
+
+<html>
+
+<center>
+
+
+<img src="static/images/logo.png" class="logo">
+<form action="#" method="post" class="spacing">
+	<div class="spacing">
+    	<p><input type="submit" name="submit_button" value="Desktop" class="desk"/></p>
+    	<p><input type="submit" name="submit_button" value="Mobile" class="mob"/></p>
+    </div>
+</form>
+
+</center>
+
+</html>
