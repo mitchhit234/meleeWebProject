@@ -7,7 +7,7 @@ The *Melee Database* is a web application inspired by [Ultimate Frame Data](http
 ## To Do
 * Most characters still have blank data fields that need to be filled
 
-* Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC)
+* Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC))
 
 * Find missing character animation GIFs, such as all of Pichu's animations and most character's throws
 
@@ -17,7 +17,7 @@ The *Melee Database* is a web application inspired by [Ultimate Frame Data](http
 
 * Clean up the CSS on the home page and character pages (some containers not fitting to page correctly)
 
-* Find a way to not have to prompt the user to select mobile/desktop
+* Find a way to not have to prompt the user to select mobile/desktop version
 
 * Add general info icon on home page, explaining terminology used on the website and give credit to all who datamined the game to obtain the frame data
 
