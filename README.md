@@ -15,7 +15,9 @@ The *Melee Database* is a web application inspired by [Ultimate Frame Data](http
 
 * Toggle some more information off if it does not apply to that character/specific move (such as how multi jabs are by default not shown unless inserted in the data table)
 
-* Clean up the CSS on the home page and character pages (some containers not fitting to page correctly)
+* Clean up the CSS on the home page and character pages for mobile 
+
+* Add search bar on homepage for characters, potentially search bar on character pages for attacks
 
 * Find a way to not have to prompt the user to select mobile/desktop version
 
