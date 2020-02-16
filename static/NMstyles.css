@@ -22,6 +22,7 @@ body{
 }
 
 .char-pic{
+	margin: 2%;
 	object-fit: cover;
 	object-position: 100% 0;
 	width: 40%;
@@ -29,22 +30,23 @@ body{
 	background: -webkit-linear-gradient(#00c0ff, #00994d);
 }
 
+
+
 .go_back, .hits{
 	font-size: 300%;
 	padding-top: 1%;
 	padding-bottom: 1%;
 	font-weight: bold;
-	background-color: #3c647d;
-	color: #fcfcfc;
 	font-family: Verdana, fantasy;
 	border-radius: 10px;
 }
 
-.hits{
-	background-color: #33ff36;
-}
-.go_back:hover, .hits:hover{
+.go_back:hover{
 	background-color: #ffe524;
+}
+
+.hits:hover{
+	background-color: #33cc33;
 }
 
 .hitbox{
@@ -106,16 +108,18 @@ body{
 .active-frames, .total-frames, .percent, .air-active-frames, .air-total-frames, .air-percent, 
 .air-landing-lag, .air-l-cancel-lag, .special-active-frames, .special-total-frames, 
 .special-percent, .special-landing-lag, .grab-total-frames, .throw-percent, .throw-total-frames, 
-.dodge-inv-frames, .dodge-total-frames, .dodge-inv-frames, .dodge-total-frames, .notes, .air-acancel, 
-.land-fall, .shield-stun, .iasa{
+.dodge-inv-frames, .dodge-total-frames, .dodge-inv-frames, .dodge-total-frames, .notes, 
+.air-acancel, .land-fall, .iasa, .shield-stun{
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: flex;
     align-items: center;
     justify-content: center;
 	min-height: 8.33%;
 	max-height: 25%
+	text-align: center;
 	border: 1px solid #00c0ff;
 	color: #000000;
-	text-align: center;
 }
 
 .notes{
@@ -139,7 +143,7 @@ body{
 	display: flex;
     align-items: center;
     justify-content: center;
-	font-size: 100%;
+	font-size: 300%;
 	color: #000000;
 	margin: 15px;
 }

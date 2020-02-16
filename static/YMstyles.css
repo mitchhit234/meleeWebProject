@@ -37,17 +37,16 @@ body{
 	padding-top: 1%;
 	padding-bottom: 1%;
 	font-weight: bold;
-	background-color: #3c647d;
-	color: #fcfcfc;
 	font-family: Verdana, fantasy;
 	border-radius: 10px;
 }
 
-.hits{
-	background-color: #ff2a26;
-}
-.go_back:hover, .hits:hover{
+.go_back:hover{
 	background-color: #ffe524;
+}
+
+.hits:hover{
+	background-color: #ff1a1a;
 }
 
 .hitbox{
@@ -116,6 +115,8 @@ body{
 .special-percent, .special-landing-lag, .grab-total-frames, .throw-percent, .throw-total-frames, 
 .dodge-inv-frames, .dodge-total-frames, .dodge-inv-frames, .dodge-total-frames, .notes, 
 .air-acancel, .land-fall, .iasa, .shield-stun{
+	margin-top: 10px;
+	margin-bottom: 10px;
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +148,7 @@ body{
 	display: flex;
     align-items: center;
     justify-content: center;
-	font-size: 100%;
+	font-size: 300%;
 	color: #000000;
 	margin: 15px;
 }
