@@ -4,6 +4,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 .header{
 	font-size: 300%;
 	font-family: Verdana;
@@ -17,6 +18,7 @@
     justify-content: center;
     font-weight: bold;
     -webkit-text-stroke: 1px black;
+    width: 100%;
 }
 .title{
 	max-width: 99%;
@@ -24,9 +26,13 @@
 }
 
 .head_bot{
-	position: relative;
+	max-width: 99%;
 	height: 20vh;
 	margin-bottom: 1%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .gif{
@@ -35,58 +41,43 @@
 	border-bottom: none;
 	padding: 2% 1% 2% 1%;
 	display: block;
-	width: 100%;
+	max-width: 100%;
 	overflow: hidden;
 }
 
 
 .go_back, .hits{
-	margin: 0;
-	padding-top: 1%;
-	padding-bottom: 1%;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	-ms-transform: translate(50%, -50%);
-	transform: translate(50%, -50%);
-	-webkit-text-stroke: 1px black;
+	font-size: 2.5vh;
 	font-weight: bold;
-	background-color: #3c647d;
-	color: #fcfcfc;
-	font-family: Verdana, fantasy;
-	font-size: 150%;
-	border-radius: 2%;
+	flex-shrink: 1;
+	list-style: none;
 }
 
-.hits{
-	-ms-transform: translate(-180%, -50%);
-	transform: translate(-180%, -50%);
-	background-color: #ff2a26;
-}
-
-.go_back:hover, .hits:hover{
+.go_back:hover{
 	background-color: #ffe524;
 }
 
+
+.hits:hover{
+	background-color: #ff1a1a;
+}
+
 .char-pic{
-	margin-bottom: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
 	border-style: solid;
 	border-radius: 10px;
 	border-color: white;
 	background: -webkit-linear-gradient(#00c0ff, #00994d);
-	height: 100%;
+	max-height: 105%;
+
 }
 .stat-container{
+	max-width: 1920px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 .move-group{
+	max-width: 1920px;
 	background: #00c0ff;
 	color: #fcfcfc;
 	justify-content: center;
@@ -95,11 +86,11 @@
 	font-weight: bold;
 
 }
-.move-container, .air-move-container, .special-move-container, .grab-container, .throw-container, .dodge-container{
-	width: 22%;
-	text-align: left;
-	margin: 1.5%;
+.move-container, .air-move-container, .special-move-container, .grab-container, .throw-container, .dodge-container, .misc-container{
+	max-width: 300px;
+	margin: 0.5%;
 	color: #fcfcfc;
+
 	
 }
 .movename, .air-movename, .special-movename, .grab-movename, .throw-movename, .dodge-movename{
@@ -132,6 +123,8 @@
 .air-total-frames, .special-total-frames, .grab-total-frames, .throw-total-frames, .dodge-total-frames,
 .air-percent, .special-percent, .throw-percent, .dodge-inv-frames, .air-landing-lag,
 .air-l-cancel-lag, .special-landing-lag, .iasa, .air-acancel, .land-fall, .shield-stun, .notes{
+	margin-top: 5px;
+	margin-bottom: 5px;
 	border: 1px solid #00c0ff;
 	font-size: 125%;
 	display: flex;
@@ -152,4 +145,9 @@
 	font-size: 150%;
 	color: #000000;
 	margin: 10px;
+}
+
+.misc-container{
+	text-align: center;
+	width: 50%;
 }

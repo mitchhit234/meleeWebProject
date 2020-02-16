@@ -13,12 +13,12 @@
 <div class='head_bot'>
 {% if box == "Y" %}
 <form action="#" method="post" class="spacing">
-	<p><input type="submit" name="submit_button" value=" Toggle Hitboxes Off " class="hits"/></p>
+	<p><input type="submit" name="submit_button" value="      Toggle Hitboxes Off      " class="hits"/></p>
 </form>
 {% endif %}
 {% if box == "N" %}
 <form action="#" method="post" class="spacing">
-	<p><input type="submit" name="submit_button" value=" Toggle Hitboxes On " class="hits"/></p>
+	<p><input type="submit" name="submit_button" value="      Toggle Hitboxes On      " class="hits"/></p>
 </form>
 {% endif %}
 <img src="{% block image %}{% endblock %}" class="char-pic">
@@ -442,7 +442,7 @@
 </div>
 <div class='move-group'>Misc Info</div>
 <div class='stat-container'>
-	<div class='move-container'>
+	<div class='misc-container'>
 		<div class='misc-info'>Weight: {% block weight %}{% endblock %}</div>
 		<div class='misc-info'>Gravity: {% block gravity %}{% endblock %}</div>
 		<div class='misc-info'>Dash Speed: {% block dash_speed %}{% endblock %}</div>

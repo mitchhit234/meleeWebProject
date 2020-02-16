@@ -360,7 +360,7 @@ def char_desk(c):
                 return redirect(url_for("desktop"))
             else:
                 return redirect(url_for("mobile"))
-        elif request.form["submit_button"] == " Toggle Hitboxes Off ":
+        elif request.form["submit_button"] == "      Toggle Hitboxes Off      ":
            hits = False
     return char(c, ver, hits)
 
