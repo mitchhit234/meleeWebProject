@@ -8,6 +8,8 @@
   	body{
   		width: 100%;
    		height: 100%;
+      max-width: 1920px;
+      margin: auto;
 
    		border: 0 0 0 0;
    		padding: 0 0 0 0;
@@ -15,7 +17,9 @@
   	}
 
   	.logo{
+      margin-top: 2%;
   		max-width: 100%;
+      height: 25%;
   	}
 
     char-grid{
@@ -32,6 +36,11 @@
     	margin: 50px 25px 10px 25px;
     	border-radius: 20px;
     }
+
+    @media (max-device-width: 1001px)
+    .images{
+      width: 40%;
+    }
     .images:hover{
     	border-color: #ffea00;
     	opacity: 0.75;
@@ -41,6 +50,7 @@
   </style>
 </head>
 <center>
+<div class=c>
 <body>
 <img src='static/images/logo.png' class="logo">
 
@@ -76,5 +86,6 @@
 
 
 </body>
+</div>
 </center>
 </html>

@@ -112,6 +112,8 @@ body{
 .air-acancel, .land-fall, .iasa, .shield-stun{
 	margin-top: 10px;
 	margin-bottom: 10px;
+	padding: 5px;
+	min-height: 16%;
 	display: flex;
     align-items: center;
     justify-content: center;

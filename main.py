@@ -140,24 +140,7 @@ class Dodges(db.Model):
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    if request.method == "POST":
-        sub_type = request.form["submit_button"]
-        if sub_type == "Desktop":
-            return redirect(url_for("desktop"))
-        else:
-            return redirect(url_for("mobile"))
-    else:
-        return render_template("version.html")
-
-
-@app.route("/home")
-def desktop():
     return render_template("home_page.html")
-
-
-@app.route("/mobile")
-def mobile():
-    return render_template("mobile.html")
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -331,7 +314,7 @@ def admin():
         return render_template("admin.html")
 
 
-def char(c, ver, hits):
+def char(c, hits):
     i = c.lower()
     boxes = "N"
     if hits:
@@ -341,28 +324,18 @@ def char(c, ver, hits):
     data = format(i)
     i = i.upper()
     i = i.replace("_", " ")
-    style = "static/" + boxes + "styles.css"
-    if ver == "mobile":
-        style = "static/" + boxes + "Mstyles.css"
-    return render_template("char.html", data=data, name=i, img=img, style=style, gif=gif, box=boxes)
+    return render_template("char.html", data=data, name=i, img=img, style=boxes, gif=gif, box=boxes)
 
 
 @app.route("/<c>", methods=["POST", "GET"])
 def char_desk(c):
-    ver = "desktop"
-    if c[0] == "M":
-        ver = "mobile"
-        c = c[1:]
     hits = True
     if request.method == "POST":
         if request.form["submit_button"] == " Select Another Character ":
-            if ver == "desktop":
-                return redirect(url_for("desktop"))
-            else:
-                return redirect(url_for("mobile"))
+            return(redirect(url_for("home")))
         elif request.form["submit_button"] == "      Toggle Hitboxes Off      ":
            hits = False
-    return char(c, ver, hits)
+    return char(c, hits)
 
 
 @app.route("/template")

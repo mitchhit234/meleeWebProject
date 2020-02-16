@@ -115,12 +115,13 @@ body{
 .special-percent, .special-landing-lag, .grab-total-frames, .throw-percent, .throw-total-frames, 
 .dodge-inv-frames, .dodge-total-frames, .dodge-inv-frames, .dodge-total-frames, .notes, 
 .air-acancel, .land-fall, .iasa, .shield-stun{
+	padding: 5px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	display: flex;
     align-items: center;
     justify-content: center;
-	min-height: 8.33%;
+	min-height: 16%;
 	max-height: 25%
 	text-align: center;
 	border: 1px solid #00c0ff;

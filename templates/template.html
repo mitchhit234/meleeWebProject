@@ -2,14 +2,15 @@
 <html>
 <head>
   <meta charset='UTF-8'>
-  <title>{% block title %}{% endblock %}</title>
-  <link rel='stylesheet' href= {% block style %}{% endblock %}>
-</head>
+  <title>{{name}}</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" media="screen and (max-device-width: 1002px)" href="static/{{style}}Mstyles.css" />
+  <link rel="stylesheet" media="screen and (min-device-width: 1001px)" href="static/{{style}}styles.css" />
 <body>
 
 <center>
 
-<div class='header'>{% block character %}{% endblock %}</div>
+<div class='header'>{{name}}</div>
 <div class='head_bot'>
 {% if box == "Y" %}
 <form action="#" method="post" class="spacing">
@@ -21,7 +22,7 @@
 	<p><input type="submit" name="submit_button" value="      Toggle Hitboxes On      " class="hits"/></p>
 </form>
 {% endif %}
-<img src="{% block image %}{% endblock %}" class="char-pic">
+<img src="{{img}}" class="char-pic">
 <form action="#" method="post" class="spacing">
 	<p><input type="submit" name="submit_button" value=" Select Another Character " class="go_back"/></p>
 </form>
