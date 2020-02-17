@@ -148,7 +148,7 @@ def login():
     if request.method == "POST":
         user = request.form["nm"]
         pswd = request.form["pw"]
-        if user == "admin" and pswd == "Stlrams99":
+        if user == "placeholder" and pswd == "placeholder2":
             return redirect(url_for("admin", usr=user, ps=pswd))
         else:
             flash("Incorrect Login Info")
