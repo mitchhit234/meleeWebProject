@@ -162,7 +162,7 @@ def admin():
     if request.method == "GET":
         n = request.args.get('usr')
         p = request.args.get('ps')
-        if n != "admin" or p != "Stlrams99":
+        if n != "placeholder" or p != "placeholder2":
             return redirect(url_for("home"))
         else:
             return render_template("admin.html")
@@ -306,10 +306,10 @@ def admin():
         try:
             db.session.add(model)
             db.session.commit()
-            flash(f"Successfully submitted info for {char} {move}")
+            #flash(f"Successfully submitted info for {char} {move}")
         except:
             db.session.commit()
-            flash(f"Successfully updated info for {char} {move}")
+            #flash(f"Successfully updated info for {char} {move}")
 
         return render_template("admin.html")
 
@@ -381,5 +381,5 @@ def format(name):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run()
 
