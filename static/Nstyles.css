@@ -1,5 +1,5 @@
 *{
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: fantasy, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -44,10 +44,11 @@
 	font-weight: bold;
 	flex-shrink: 1;
 	list-style: none;
+	padding: 5px;
 }
 
 .go_back:hover{
-	background-color: ##00e600;
+	background-color: #ffe524;
 }
 
 
@@ -77,10 +78,13 @@
 	font-size: 300%;
 	-webkit-text-stroke: 1px black;
 	font-weight: bold;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	padding: 10px;
 
 }
 .move-container, .air-move-container, .special-move-container, .grab-container, .throw-container, .dodge-container, .misc-container{
-	width: 300px;
+	width: 280px;
 	margin: 0.5%;
 	color: #fcfcfc;
 
