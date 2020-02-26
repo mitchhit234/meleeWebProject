@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset='UTF-8'>
-  <title>Main Database Page</title>
+  <title>Melee Frame Data</title>
+  <link rel="shortcut icon" href="static/images/icon.jpg" type=image/gif>
   <style>
 
   	body{
@@ -18,9 +19,20 @@
 
   	.logo{
       margin-top: 2%;
-  		max-width: 100%;
+  		max-width: 90%;
       height: 25%;
+      position: relative
+
   	}
+
+    .info{
+      width: 40px;
+      filter: invert(63%) sepia(53%) saturate(701%) hue-rotate(213deg) brightness(100%) contrast(103%);
+    }
+
+    .info:hover{
+      filter: invert(63%) sepia(53%) saturate(701%) hue-rotate(213deg) brightness(125%) contrast(103%);
+    }
 
     char-grid{
 	    display: flex;
@@ -47,13 +59,74 @@
 
     }
 
+    .modalHead{
+      color: #dd99ff;
+      border-style: solid;
+      border-width: 8px;
+      text-align: center;
+    }
+    
+
     .modalDialog {
       position: fixed;
-      font-family: Arial;
+      font-family: Bookman, Helvetica, sans-serif;
       top: 0;
+      right: 0;
       bottom: 0;
-      right: 
+      left: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 99999;
+      opacity:0;
+      -webkit-transition: opacity 400ms ease-in;
+      -moz-transition: opacity 400ms ease-in;
+      transition: opacity 400ms ease-in;
+      pointer-events: none;
     }
+
+
+
+    .modalDialog:target {
+      opacity:1;
+      pointer-events: auto;
+    }
+    
+    .modalDialog > div {
+      width: 40%;
+      max-width: 600px;
+      position: relative;
+      margin: 10% auto;
+      padding: 5px 20px 13px 20px;
+      background: #fff;
+      
+      max-height: calc(100% - 250px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      text-align: left;
+      font-size: 125%;
+    }
+
+
+
+    .close {
+      background: #606061;
+      color: #FFFFFF;
+      line-height: 25px;
+      position: absolute;
+      right: 2px;
+      text-align: center;
+      top: 5px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+    }
+    
+    .close:hover { background: #00d9ff; }
 
   </style>
 </head>
@@ -61,6 +134,36 @@
 <div class=c>
 <body>
 <img src='static/images/logo.png' class="logo">
+
+
+
+<a href="#openModal"><img src='static/images/info.png' class='info'></a>
+
+<div id="openModal" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h1><div class=modalHead>General Info</div></h1>
+    <p>Created by Janoris (Mitchell Meier). Inspired by <a href=https://twitter.com/MetalMusicMan_>MetalMusicMan's</a> <a href=https://ultimateframedata.com/>Ultimate Frame Data</a>. Send a DM to either my <a href=https://twitter.com/SandTFGC> region's twitter </a> which I currently run or my <a href=https://twitter.com/Mitchhit234>personal twitter</a> if you notice any errors or have any suggestions.</p>
+    <p>This site is NOT FINISHED and still currently being worked on. I've got a big workload between school and looking for an internship, but I work on it whenever I get the chance. Check out the <a href=https://github.com/mitchhit234/meleeWebProject>GitHub</a> page to see my current to-do list
+    <h2><div class=modalHead>Data Soucres</div></h2>
+    <p>Huge shoutout to <a href=https://theshoemaker.de/>Joel Schumacher</a> for a majority of the frame data. He created an amazing application to extract most of the data from the game which is listed on his <a href=https://github.com/pfirsich/meleeFrameDataExtractor>GitHub</a>. I'd suggest checking out <a href=http://melee-framedata.theshoemaker.de/>his website</a> if you want to see other interesting info such as launch angles</p>
+    <p>Most other data, as well as character GIFs, were taken from this <a href=https://smashboards.com/threads/stratocasters-hitbox-system-new-download-link.283973/> SmashBoards post</a> from Stratocaster. People who contributed to the post include Seikend, Strong Bad, standardtoaster, Massive, Shoopman, Emma Watson's Boyfriend, Seikend, Aizen, knihT, and mastermoo420. The rest of the data was found on <a href=https://www.ssbwiki.com/>Smash Wiki</a></p>
+    <h2><div class=modalHead>Terminology</div></h2>
+    <p><strong>IASA</strong> stands for Interruptible As Soon As, which means you can cancel the animation if you input another action at said frame</p>
+    <p><strong>Auto Cancel</strong> refers to landing with an aerial at a certain time such that no excess landing lag will occur from said aerial</p>
+    <p><strong>PLA</strong> stands for Perfect Ledgedash Angle, and it descirbes the amount of intangibility frames a character will have to act with if a perfect ledgedash was performed (on Final Destination ledges)</p>
+    <p><strong>LFS</strong> stands for Landing Fall Special, and refers to the amount of frames a character will occur of landing lag if put into special fall by a paticular move</p>
+    <p><strong>Stailing Moves</strong> is a mechanic that will change the damage and shieldstun a move will deal when that move is used multipule times. Numbers provided on this site refers to the base damage and shieldstun a move will do if it is not stale</p>
+    <p><strong>Shield Stun</strong> refers to the amount of time an opponent will be stuck in shield if a character attacks their shield with said move. Every character will incur shield stun except for Yoshi</p>
+    <h2><div class=modalHead>Universal Data</div></h2>
+    <p>To <strong>Power Shield</strong> projectiles, start shielding 2 frames before the projectile hits you. To power shield normal attacks, start shielding 4 frames before the attack hits you. Powershielding is useful because it will not deplete a character's shield and will decrease the amount of shieldstun a character recieves (ONLY IF USING GROUNDED ATTACKS). Power shielding projectiles reflects them back at the opponent, but reduces their damage by half and lowers knockback. 
+    <p><strong>Dropping Shield</strong> takes 15 frames. Jumping and grabbing out of shield does not incur shield drop</p>
+    <p><strong>Jump Canceling</strong> refers to inputing an up smash, up special, grab, or item throw during a character's jump squat animation to cancel the jump and perform said move. Useful for characters to act quickly out of shield (except Yoshi, who can not jump out of shield), or to use a standing grab instead of a dash grab (to avoid extra frames of lag). <a href=https://smashboards.com/threads/out-of-shield-options-frame-data.294336/>This thread</a> goes into detail about each character's best out of shield options
+  </div>
+  
+</div>
+
+
 
 <div class="char-grid">
     <a href="captain_falcon"><img src="static/images/captain_falcon_SSBM.jpg" class="images"></a>
