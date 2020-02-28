@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint, PrimaryKeyConstraint, join
+import hashlib
 
 app = Flask(__name__)
 app.secret_key = "oogabooga"
@@ -146,10 +147,14 @@ def home():
 @app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
-        user = request.form["nm"]
-        pswd = request.form["pw"]
-        if user == "placeholder" and pswd == "placeholder2":
-            return redirect(url_for("admin", usr=user, ps=pswd))
+        user = request.form["nm"].encode("utf8")
+        pswd = request.form["pw"].encode("utf8")
+        user = hashlib.sha1(user).hexdigest()
+        pswd = hashlib.sha1(pswd).hexdigest()
+        auth_user = "b2b9d047cb15a4ee2f66e3be0a97e512d2f22473"
+        auth_pswd = "eda91b38e63bc56017dc77a054a540f635c63f31"
+        if user == auth_user and pswd == auth_pswd:
+            return redirect(url_for("admin", usr=user, ps=pswd, a_usr=auth_user, a_ps=auth_pswd))
         else:
             flash("Incorrect Login Info")
             return redirect(url_for("login"))
@@ -162,7 +167,9 @@ def admin():
     if request.method == "GET":
         n = request.args.get('usr')
         p = request.args.get('ps')
-        if n != "placeholder" or p != "placeholder2":
+        a_n = request.args.get('a_usr')
+        a_p = request.args.get('a_ps')
+        if n != a_n or p != a_p:
             return redirect(url_for("home"))
         else:
             return render_template("admin.html")
