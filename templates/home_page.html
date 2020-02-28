@@ -64,6 +64,7 @@
       border-style: solid;
       border-width: 8px;
       text-align: center;
+      padding: 10px;
     }
     
 
@@ -91,21 +92,28 @@
     }
     
     .modalDialog > div {
-      width: 40%;
+      width: 50%;
       max-width: 600px;
       position: relative;
       margin: 10% auto;
       padding: 5px 20px 13px 20px;
       background: #fff;
       
-      max-height: calc(100% - 250px);
+      max-height: calc(100% - 300px);
       overflow-y: auto;
       overflow-x: hidden;
       text-align: left;
-      font-size: 125%;
+      font-size: 150%;
+      font-family: "PT-Sans", Helvetica, sans-serif;
     }
 
-
+    @media screen and (max-device-width: 1002px){
+	.modalDialog > div{
+	  width: 90%;
+	  font-size: 225%;
+	  line-height: 125%;
+	}
+    }
 
     .close {
       background: #606061;
@@ -144,7 +152,7 @@
     <a href="#close" title="Close" class="close">X</a>
     <h1><div class=modalHead>General Info</div></h1>
     <p>Created by Janoris (Mitchell Meier). Inspired by <a href=https://twitter.com/MetalMusicMan_>MetalMusicMan's</a> <a href=https://ultimateframedata.com/>Ultimate Frame Data</a>. Send a DM to either my <a href=https://twitter.com/SandTFGC> region's twitter </a> which I currently run or my <a href=https://twitter.com/Mitchhit234>personal twitter</a> if you notice any errors or have any suggestions.</p>
-    <p>This site is NOT FINISHED and still currently being worked on. I've got a big workload between school and looking for an internship, but I work on it whenever I get the chance. Check out the <a href=https://github.com/mitchhit234/meleeWebProject>GitHub</a> page to see my current to-do list
+    <p>This site is still currently being worked on. I've got a big workload between school and looking for an internship, but I work on it whenever I get the chance. Check out the <a href=https://github.com/mitchhit234/meleeWebProject>GitHub</a> page to see my current to-do list
     <h2><div class=modalHead>Data Soucres</div></h2>
     <p>Huge shoutout to <a href=https://theshoemaker.de/>Joel Schumacher</a> for a majority of the frame data. He created an amazing application to extract most of the data from the game which is listed on his <a href=https://github.com/pfirsich/meleeFrameDataExtractor>GitHub</a>. I'd suggest checking out <a href=http://melee-framedata.theshoemaker.de/>his website</a> if you want to see other interesting info such as launch angles</p>
     <p>Most other data, as well as character GIFs, were taken from this <a href=https://smashboards.com/threads/stratocasters-hitbox-system-new-download-link.283973/> SmashBoards post</a> from Stratocaster. People who contributed to the post include Seikend, Strong Bad, standardtoaster, Massive, Shoopman, Emma Watson's Boyfriend, Seikend, Aizen, knihT, and mastermoo420. The rest of the data was found on <a href=https://www.ssbwiki.com/>Smash Wiki</a></p>
