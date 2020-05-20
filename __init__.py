@@ -169,7 +169,7 @@ def admin():
         p = request.args.get('ps')
         a_n = request.args.get('a_usr')
         a_p = request.args.get('a_ps')
-        if n != a_n or p != a_p:
+        if n != a_n or p != a_p or n == None:
             return redirect(url_for("home"))
         else:
             return render_template("admin.html")
