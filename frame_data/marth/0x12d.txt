@@ -1,0 +1,34 @@
+Total Frames: 33
+IASA:  None
+
+Hit Frames:
+5-10: A, B, C, D
+30-31: E, F, G
+
+Hitbox A
+dmg: 7, shield dmg: 38, angle: 361, BK: 30, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 5
+
+Hitbox B
+dmg: 7, shield dmg: 30, angle: 361, BK: 30, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 5
+
+Hitbox C
+dmg: 7, shield dmg: 30, angle: 361, BK: 34, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 5
+
+Hitbox D
+dmg: 7, shield dmg: 38, angle: 361, BK: 40, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 5
+
+Hitbox E
+dmg: 28, shield dmg: 60, angle: 361, BK: 30, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 12, shield stun: 14
+
+Hitbox F
+dmg: 28, shield dmg: 60, angle: 361, BK: 34, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 12, shield stun: 14
+
+Hitbox G
+dmg: 28, shield dmg: 60, angle: 361, BK: 40, KS: 100, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 12, shield stun: 14

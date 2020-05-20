@@ -1,0 +1,16 @@
+Total Frames: 29
+IASA:  None
+
+Hit Frames: 4-12
+
+Hitbox A
+dmg: 9, angle: 100, BK: 30, KS: 127, WDKB: 0, clang, rebound
+hit lag: 6, shield stun: 6
+
+Hitbox B
+dmg: 9, angle: 100, BK: 30, KS: 125, WDKB: 0, clang, rebound
+hit lag: 6, shield stun: 6
+
+Hitbox C
+dmg: 9, angle: 100, BK: 30, KS: 123, WDKB: 0, clang, rebound
+hit lag: 6, shield stun: 6

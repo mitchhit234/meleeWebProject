@@ -1,0 +1,26 @@
+Total Frames: 87
+IASA:  None
+
+Throw:
+dmg: 7, angle: 90, BK: 10, KS: 45, WDKB: 0, element: 0
+
+Hit Frames:
+10-11: A
+14-15: A
+18-19: A
+22-23: A
+26-27: A
+30-31: A
+34-35: A
+38-39: A
+42-43: A
+46-47: A
+56: B
+
+Hitbox A
+dmg: 0, angle: 270, BK: 0, KS: 100, WDKB: 10, no clang, no rebound
+hit lag: 3, shield stun: 1
+
+Hitbox B
+dmg: 1, angle: 90, BK: 10, KS: 100, WDKB: 0, no clang, no rebound
+hit lag: 3, shield stun: 2

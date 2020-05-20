@@ -1,0 +1,7 @@
+Total Frames: 3
+IASA:  None
+
+Hit Frames: 1
+
+dmg: 5, angle: 0, BK: 0, KS: 100, WDKB: 80, element: electric, clang, no rebound
+hit lag (attacker): 4, hit lag (defender): 6, shield stun: 4

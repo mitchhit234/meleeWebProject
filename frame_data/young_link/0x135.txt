@@ -1,0 +1,77 @@
+Total Frames: 79
+IASA:  None
+
+Hit Frames:
+8-13: A, B, C, D
+16-20: E, F, G, H
+22-27: I, J, K, L
+31-37: M, N, O, P
+46-50: Q
+
+Hitbox A
+dmg: 3, angle: 88, BK: 0, KS: 100, WDKB: 80, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox B
+dmg: 3, angle: 79, BK: 0, KS: 100, WDKB: 80, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox C
+dmg: 3, angle: 70, BK: 0, KS: 100, WDKB: 80, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox D
+dmg: 3, angle: 60, BK: 0, KS: 100, WDKB: 80, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox E
+dmg: 2, angle: 88, BK: 0, KS: 100, WDKB: 72, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox F
+dmg: 2, angle: 79, BK: 0, KS: 100, WDKB: 72, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox G
+dmg: 2, angle: 70, BK: 0, KS: 100, WDKB: 72, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox H
+dmg: 2, angle: 60, BK: 0, KS: 100, WDKB: 72, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox I
+dmg: 2, angle: 88, BK: 0, KS: 100, WDKB: 70, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox J
+dmg: 2, angle: 79, BK: 0, KS: 100, WDKB: 70, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox K
+dmg: 2, angle: 70, BK: 0, KS: 100, WDKB: 70, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox L
+dmg: 2, angle: 60, BK: 0, KS: 100, WDKB: 70, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox M
+dmg: 2, angle: 88, BK: 0, KS: 100, WDKB: 68, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox N
+dmg: 2, angle: 79, BK: 0, KS: 100, WDKB: 68, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox O
+dmg: 2, angle: 70, BK: 0, KS: 100, WDKB: 68, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox P
+dmg: 2, angle: 60, BK: 0, KS: 100, WDKB: 68, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox Q
+dmg: 3, angle: 361, BK: 40, KS: 180, WDKB: 0, element: slash, clang, rebound
+hit lag: 4, shield stun: 3

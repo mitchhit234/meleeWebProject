@@ -1,0 +1,47 @@
+Total Frames: 60
+IASA:  52
+
+Hit Frames:
+11-15: A, B, C
+26-28: D, E, F, G
+41-43: H, I, J
+
+Hitbox A
+dmg: 4, angle: 98, BK: 40, KS: 100, WDKB: 26, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox B
+dmg: 4, angle: 98, BK: 40, KS: 100, WDKB: 30, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox C
+dmg: 4, angle: 98, BK: 40, KS: 100, WDKB: 33, element: slash, clang, rebound
+hit lag: 4, shield stun: 3
+
+Hitbox D
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 30, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox E
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 33, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox F
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 37, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox G
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 40, element: slash, clang, rebound
+hit lag: 3, shield stun: 2
+
+Hitbox H
+dmg: 10, angle: 80, BK: 90, KS: 80, WDKB: 0, element: slash, clang, rebound
+hit lag: 6, shield stun: 6
+
+Hitbox I
+dmg: 10, angle: 90, BK: 90, KS: 80, WDKB: 0, element: slash, clang, rebound
+hit lag: 6, shield stun: 6
+
+Hitbox J
+dmg: 9, angle: 90, BK: 90, KS: 80, WDKB: 0, element: slash, clang, rebound
+hit lag: 6, shield stun: 6

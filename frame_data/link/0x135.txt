@@ -1,0 +1,81 @@
+Total Frames: 79
+IASA:  None
+
+Hit Frames:
+8-13: A, B, C, D
+16-20: E, F, G, H
+22-27: I, J, K, L
+31-37: M, N, O, P
+46-50: Q, R
+
+Hitbox A
+dmg: 4, angle: 90, BK: 0, KS: 100, WDKB: 72, element: slash, no clang, no rebound
+hit lag: 4, shield stun: 3
+
+Hitbox B
+dmg: 6, angle: 86, BK: 0, KS: 100, WDKB: 68, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 4
+
+Hitbox C
+dmg: 6, angle: 80, BK: 0, KS: 100, WDKB: 68, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 4
+
+Hitbox D
+dmg: 6, angle: 75, BK: 0, KS: 100, WDKB: 68, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 4
+
+Hitbox E
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 64, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox F
+dmg: 2, angle: 86, BK: 0, KS: 100, WDKB: 60, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox G
+dmg: 2, angle: 80, BK: 0, KS: 100, WDKB: 60, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox H
+dmg: 2, angle: 75, BK: 0, KS: 100, WDKB: 60, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox I
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 58, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox J
+dmg: 2, angle: 86, BK: 0, KS: 100, WDKB: 55, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox K
+dmg: 2, angle: 80, BK: 0, KS: 100, WDKB: 55, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox L
+dmg: 2, angle: 75, BK: 0, KS: 100, WDKB: 55, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox M
+dmg: 2, angle: 90, BK: 0, KS: 100, WDKB: 46, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox N
+dmg: 2, angle: 86, BK: 0, KS: 100, WDKB: 43, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox O
+dmg: 2, angle: 80, BK: 0, KS: 100, WDKB: 43, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox P
+dmg: 2, angle: 75, BK: 0, KS: 100, WDKB: 43, element: slash, no clang, no rebound
+hit lag: 3, shield stun: 2
+
+Hitbox Q
+dmg: 4, angle: 361, BK: 40, KS: 160, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 4, shield stun: 3
+
+Hitbox R
+dmg: 6, angle: 361, BK: 40, KS: 160, WDKB: 0, element: slash, no clang, no rebound
+hit lag: 5, shield stun: 4

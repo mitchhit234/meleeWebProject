@@ -1,0 +1,10 @@
+Total Frames: 49
+IASA:  None
+
+Throw:
+dmg: 5, angle: 45, BK: 17, KS: 60, WDKB: 0, element: 8
+
+Hit Frames: 24-27
+
+dmg: 6, shield dmg: 1, angle: 361, BK: 0, KS: 0, WDKB: 90, no clang, no rebound
+hit lag: 5, shield stun: 4

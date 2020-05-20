@@ -1,0 +1,7 @@
+Total Frames: 42
+IASA:  None
+
+Throw:
+dmg: 6, angle: 120, BK: 16, KS: 60, WDKB: 0, element: 4
+
+Hit Frames: 

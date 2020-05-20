@@ -1,0 +1,16 @@
+Total Frames: 27
+IASA:  26
+
+Hit Frames: 12-13
+
+Hitbox A
+dmg: 12, angle: 270, BK: 60, KS: 100, WDKB: 0, clang, rebound, only hits grounded
+hit lag: 7, shield stun: 7
+
+Hitbox B
+dmg: 12, angle: 80, BK: 15, KS: 100, WDKB: 0, clang, rebound, only hits airborne
+hit lag: 7, shield stun: 7
+
+Hitbox C
+dmg: 12, angle: 270, BK: 60, KS: 100, WDKB: 0, clang, rebound
+hit lag: 7, shield stun: 7

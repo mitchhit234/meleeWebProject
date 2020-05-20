@@ -1,0 +1,10 @@
+Total Frames: 39
+IASA:  None
+Auto-Cancel: <10, >37
+Landing Lag: 20
+L-cancelled: 10
+
+Hit Frames: 10-12, 14-16, 18-20, 22-24, 26-28
+
+dmg: 2, angle: 361, BK: 0, KS: 100, WDKB: 30, element: electric, clang, rebound
+hit lag (attacker): 3, hit lag (defender): 4, shield stun: 2

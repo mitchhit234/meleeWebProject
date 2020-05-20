@@ -1,0 +1,12 @@
+Total Frames: 69
+IASA:  None
+
+Hit Frames: 10-15
+
+Hitbox A
+dmg: 0, angle: 361, BK: 0, KS: 100, WDKB: 0, element: grab, clang, no rebound, only hits airborne
+hit lag: 3, shield stun: 1
+
+Hitbox B
+dmg: 0, angle: 361, BK: 0, KS: 100, WDKB: 0, element: grab, clang, no rebound, only hits grounded
+hit lag: 3, shield stun: 1

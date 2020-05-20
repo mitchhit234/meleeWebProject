@@ -1,0 +1,38 @@
+Total Frames: 56
+IASA:  51
+
+Hit Frames:
+5: A, B, C
+7: A, B, C
+9: A, B, C
+11: A, B, C
+13: A, B, C
+15: A, B, C
+17: A, B, C
+24: A, C, D
+26: A, C, D
+28: A, C, D
+30: A, C, D
+32: A, C, D
+34: A, C, D
+36: E
+
+Hitbox A
+dmg: 1, angle: 90, BK: 0, KS: 100, WDKB: 16, element: electric, no clang, no rebound
+hit lag (attacker): 3, hit lag (defender): 4, shield stun: 2
+
+Hitbox B
+dmg: 1, angle: 170, BK: 0, KS: 100, WDKB: 20, element: electric, no clang, no rebound
+hit lag (attacker): 3, hit lag (defender): 4, shield stun: 2
+
+Hitbox C
+dmg: 1, angle: 90, BK: 0, KS: 100, WDKB: 45, element: electric, no clang, no rebound
+hit lag (attacker): 3, hit lag (defender): 4, shield stun: 2
+
+Hitbox D
+dmg: 1, angle: 110, BK: 0, KS: 100, WDKB: 20, element: electric, no clang, no rebound
+hit lag (attacker): 3, hit lag (defender): 4, shield stun: 2
+
+Hitbox E
+dmg: 5, angle: 90, BK: 20, KS: 210, WDKB: 0, element: electric, clang, no rebound
+hit lag (attacker): 4, hit lag (defender): 6, shield stun: 4

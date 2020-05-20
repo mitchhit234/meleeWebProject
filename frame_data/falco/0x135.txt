@@ -1,0 +1,7 @@
+Total Frames: 29
+IASA:  None
+
+Hit Frames: 
+
+dmg: 16, shield dmg: 5, angle: 80, BK: 80, KS: 60, WDKB: 0, element: fire, clang, rebound
+hit lag: 8, shield stun: 9

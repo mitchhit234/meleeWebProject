@@ -1,0 +1,17 @@
+Total Frames: 49
+IASA:  40
+Auto-Cancel: <5, >34
+Landing Lag: 15
+L-cancelled: 7
+
+Hit Frames:
+5-8: A
+9-29: B
+
+Hitbox A
+dmg: 14, angle: 361, BK: 10, KS: 100, WDKB: 0, clang, rebound
+hit lag: 7, shield stun: 8
+
+Hitbox B
+dmg: 10, angle: 361, BK: 10, KS: 100, WDKB: 0, clang, rebound
+hit lag: 6, shield stun: 6
