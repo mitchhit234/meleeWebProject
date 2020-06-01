@@ -113,7 +113,7 @@
 
 
 {% block fsmash_start %}{{data[5].start}}{% endblock %}
-{% block fsmash_active1 %}{% endblock %}{{data[5].start}}{% block fsmash_active2 %}{{data[5].end}}{% endblock %}
+{% block fsmash_active1 %}{{data[5].start}}{% endblock %}{% block fsmash_active2 %}{{data[5].end}}{% endblock %}
 {% block fsmash_total %}{{data[5].total}}{% endblock %}
 {% block fsmash_iasa %}{{data[5].iasa}}{% endblock %}
 {% block fsmash_stun %}{{data[5].stun}}{% endblock %}
@@ -133,7 +133,7 @@
 
 
 {% block dsmash_start %}{{data[7].start}}{% endblock %}
-{% block dsmash_active1 %}{% endblock %}{{data[7].start}}{% block dsmash_active2 %}{{data[7].end}}{% endblock %}
+{% block dsmash_active1 %}{{data[7].start}}{% endblock %}{% block dsmash_active2 %}{{data[7].end}}{% endblock %}
 {% block dsmash_total %}{{data[7].total}}{% endblock %}
 {% block dsmash_iasa %}{{data[7].iasa}}{% endblock %}
 {% block dsmash_stun %}{{data[7].stun}}{% endblock %}
