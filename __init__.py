@@ -266,7 +266,7 @@ def admin():
                 fc = Dodges.query.filter_by(char=char, type=move).first()
                 if fc:
                     fc.start = start
-                    fc.end = end
+                    fc.inv_end = end
                     fc.total = total
                     fc.notes = notes
                 else:
