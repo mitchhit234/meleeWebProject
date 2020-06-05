@@ -277,9 +277,12 @@ def admin():
                     fc.start = start
                     fc.end = end
                     fc.total = total
+                    fc.iasa = iasa
+                    fc.stun = stun
                     fc.percent = percent
-                    fc.percent_weak = w_percent
                     fc.notes = notes
+                    if w_percent != "":
+                        fc.percent_weak = w_percent
                 else:
                     model = Attacks(char, move, start, end, total, percent, notes, iasa, stun, w_percent)
             else:
@@ -313,10 +316,10 @@ def admin():
         try:
             db.session.add(model)
             db.session.commit()
-            #flash(f"Successfully submitted info for {char} {move}")
+            flash(f"Successfully submitted info for {char} {move}")
         except:
             db.session.commit()
-            #flash(f"Successfully updated info for {char} {move}")
+            flash(f"Successfully updated info for {char} {move}")
 
         return render_template("admin.html")
 
