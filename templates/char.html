@@ -313,23 +313,26 @@
 
 
 
-{% block spotdoge_start %}{{data[24].start}}{% endblock %}
+{% block spotdodge_start %}{{data[24].start}}{% endblock %}
+{% block spotdodge_active %}{{data[24].start}}{% endblock %}
 {% block spotdodge_inv %}{{data[24].inv_end}}{% endblock %}
 {% block spotdodge_total %}{{data[24].total}}{% endblock %}
 {% block spotdodge_notes %}{{data[24].notes}}{% endblock %}
 
 {% block broll_start %}{{data[25].start}}{% endblock %}
+{% block broll_active %}{{data[25].start}}{% endblock %}
 {% block broll_inv %}{{data[25].inv_end}}{% endblock %}
 {% block broll_total %}{{data[25].total}}{% endblock %}
 {% block broll_notes %}{{data[25].notes}}{% endblock %}
 
 {% block froll_start %}{{data[26].start}}{% endblock %}
+{% block froll_active %}{{data[26].start}}{% endblock %}
 {% block froll_inv %}{{data[26].inv_end}}{% endblock %}
 {% block froll_total %}{{data[26].total}}{% endblock %}
 {% block froll_notes %}{{data[26].notes}}{% endblock %}
 
-{% block airdodge_start %}
-{% if name == "BOWSER" %}{{data[27].start}}{% else %}4{% endif %}{% endblock %}
+{% block airdodge_start %}{% if name == "BOWSER" %}{{data[27].start}}{% else %}4{% endif %}{% endblock %}
+{% block airdodge_active %}{% if name == "BOWSER" %}{{data[27].start}}{% else %}4{% endif %}{% endblock %}
 {% block airdodge_inv %}{% if data[27].inv_end %}{{data[27].inv_end}}{% else %}29{% endif %}{% endblock %}
 {% block airdodge_total %}{{data[27].total}}{% endblock %}
 {% block airdodge_ld_fl_spec %}10{% endblock %}

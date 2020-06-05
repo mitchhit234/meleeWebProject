@@ -415,8 +415,8 @@
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Spot Dodge</div>
 		<div class='hitbox'><img src="{% block gif_sdodge %}{% endblock %}" class="gif"></div>
-		<div class='dodge-startup'>{% block spotdoge_start %}{% endblock %} Frame Startup</div>
-		<div class='dodge-inv-frames'>{% block spotdodge_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-startup'>{% block spotdodge_start %}{% endblock %} Frame Startup</div>
+		<div class='dodge-inv-frames'>Inv. Frames {% block spotdodge_active %}{% endblock %}-{% block spotdodge_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block spotdodge_total %}{% endblock %} Total Frames</div>
 		{% if data[24].notes %} <div class='notes'>Notes - {% block spotdodge_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -424,7 +424,7 @@
 		<div class='dodge-movename'>Backward Roll</div>
 		<div class='hitbox'><img src="{% block gif_broll %}{% endblock %}" class="gif"></div>
 		<div class='dodge-startup'>{% block broll_start %}{% endblock %} Frame Startup</div>
-		<div class='dodge-inv-frames'>{% block broll_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-inv-frames'>Inv. Frames {% block broll_active %}{% endblock %}-{% block broll_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block broll_total %}{% endblock %} Total Frames</div>
 		{% if data[25].notes %} <div class='notes'>Notes - {% block broll_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -432,7 +432,7 @@
 		<div class='dodge-movename'>Forward Roll</div>
 		<div class='hitbox'><img src="{% block gif_froll %}{% endblock %}" class="gif"></div>
 		<div class='dodge-startup'>{% block froll_start %}{% endblock %} Frame Startup</div>
-		<div class='dodge-inv-frames'>{% block froll_inv %}{% endblock %} Inv. Frames</div>
+		<div class='dodge-inv-frames'>Inv. Frames {% block froll_active %}{% endblock %}-{% block froll_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block froll_total %}{% endblock %} Total Frames</div>
 		{% if data[26].notes %} <div class='notes'>Notes - {% block froll_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -440,7 +440,7 @@
 		<div class='dodge-movename'>Air Dodge</div>
 		<div class='hitbox'><img src="{% block gif_adodge %}{% endblock %}" class="gif"></div>
 		<div class='dodge-startup'>{% block airdodge_start %}{% endblock %} Frame Startup</div>
-		<div class='dodge-inv-frames'>Inv. Ends Frame {% block airdodge_inv %}{% endblock %}</div>
+		<div class='dodge-inv-frames'>Inv.Frames {% block airdodge_active %}{% endblock %}-{% block airdodge_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block airdodge_total %}{% endblock %} Total Frames</div>
 		<div class='land-fall'>Landing Fall Special Lag: {% block airdodge_ld_fl_spec %}{% endblock %} Frames</div>
 		{% if data[27].notes %} <div class='notes'>Notes - {% block airdodge_notes %}{% endblock %}</div> {% endif %}
