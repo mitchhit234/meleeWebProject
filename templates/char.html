@@ -172,6 +172,7 @@
 {% block bair_total %}{{data[10].total}}{% endblock %}
 {% block bair_stun %}{{data[10].stun}}{% endblock %}
 {% block bair_percent %}{{data[10].percent}}{% endblock %}{% block bair_wpercent %}{{data[10].percent_weak}}{% endblock %}
+{% block bair_iasa %}{{data[10].iasa}}{% endblock %}
 {% block bair_lag %}{{data[10].land_lag}}{% endblock %}
 {% block bair_lcancel %}{{data[10].cancel_lag}}{% endblock %}
 {% block bair_acancel1 %}{{data[10].auto_cancel_s}}{% endblock %}
@@ -210,6 +211,7 @@
 {% block neutralb_total %}{{data[13].total}}{% endblock %}
 {% block neutralb_stun %}{{data[13].stun}}{% endblock %}
 {% block neutralb_percent %}{{data[13].percent}}{% endblock %}
+{% block neutralb_wpercent %}{{data[13].percent_weak}}{% endblock %}
 {% block neutralb_lag %}{{data[13].land_lag}}{% endblock %}
 {% block neutralb_notes %}{{data[13].notes}}{% endblock %}
 
@@ -218,6 +220,7 @@
 {% block aneutralb_total %}{{data[31].total}}{% endblock %}
 {% block aneutralb_stun %}{{data[31].stun}}{% endblock %}
 {% block aneutralb_percent %}{{data[31].percent}}{% endblock %}
+{% block aneutralb_wpercent %}{{data[31].percent_weak}}{% endblock %}
 {% block aneutralb_lag %}{{data[31].land_lag}}{% endblock %}
 {% block aneutralb_ld_fl_spec %}{{data[31].ld_fl_spec}}{% endblock %}
 {% block aneutralb_notes %}{{data[31].notes}}{% endblock %}
@@ -226,7 +229,8 @@
 {% block sideb_active1 %}{{data[15].start}}{% endblock %}{% block sideb_active2 %}{{data[15].end}}{% endblock %}
 {% block sideb_total %}{{data[15].total}}{% endblock %}
 {% block sideb_stun %}{{data[15].stun}}{% endblock %}
-{% block sideb_percent %}{{data[15].percent}}{% endblock %}%
+{% block sideb_percent %}{{data[15].percent}}{% endblock %}
+{% block sideb_wpercent %}{{data[15].percent_weak}}{% endblock %}
 {% block sideb_lag %}{{data[15].land_lag}}{% endblock %}
 {% block sideb_notes %}{{data[15].notes}}{% endblock %}
 
@@ -234,7 +238,8 @@
 {% block asideb_active1 %}{{data[32].start}}{% endblock %}{% block asideb_active2 %}{{data[32].end}}{% endblock %}
 {% block asideb_total %}{{data[32].total}}{% endblock %}
 {% block asideb_stun %}{{data[32].stun}}{% endblock %}
-{% block asideb_percent %}{{data[32].percent}}{% endblock %}%
+{% block asideb_percent %}{{data[32].percent}}{% endblock %}
+{% block asideb_wpercent %}{{data[32].percent_weak}}{% endblock %}
 {% block asideb_lag %}{{data[32].land_lag}}{% endblock %}
 {% block asideb_ld_fl_spec %}{{data[32].ld_fl_spec}}{% endblock %}
 {% block asideb_notes %}{{data[32].notes}}{% endblock %}
@@ -244,7 +249,9 @@
 {% block upb_total %}{{data[14].total}}{% endblock %}
 {% block upb_stun %}{{data[14].stun}}{% endblock %}
 {% block upb_percent %}{{data[14].percent}}{% endblock %}
+{% block upb_wpercent %}{{data[14].percent_weak}}{% endblock %}
 {% block upb_lag %}{{data[14].land_lag}}{% endblock %}
+{% block upb_ld_fl_spec %}{{data[14].ld_fl_spec}}{% endblock %}
 {% block upb_notes %}{{data[14].notes}}{% endblock %}
 
 {% block aupb_start %}{{data[33].start}}{% endblock %}
@@ -252,6 +259,7 @@
 {% block aupb_total %}{{data[33].total}}{% endblock %}
 {% block aupb_stun %}{{data[33].stun}}{% endblock %}
 {% block aupb_percent %}{{data[33].percent}}{% endblock %}
+{% block aupb_wpercent %}{{data[33].percent_weak}}{% endblock %}
 {% block aupb_lag %}{{data[33].land_lag}}{% endblock %}
 {% block aupb_ld_fl_spec %}{{data[33].ld_fl_spec}}{% endblock %}
 {% block aupb_notes %}{{data[33].notes}}{% endblock %}
@@ -260,7 +268,8 @@
 {% block downb_active1 %}{{data[16].start}}{% endblock %}{% block downb_active2 %}{{data[16].end}}{% endblock %}
 {% block downb_total %}{{data[16].total}}{% endblock %}
 {% block downb_stun %}{{data[16].stun}}{% endblock %}
-{% block downb_percent %}{{data[16].percent}}{% endblock %}%
+{% block downb_percent %}{{data[16].percent}}{% endblock %}
+{% block downb_wpercent %}{{data[16].percent_weak}}{% endblock %}
 {% block downb_lag %}{{data[16].land_lag}}{% endblock %}
 {% block downb_notes %}{{data[16].notes}}{% endblock %}
 
@@ -269,6 +278,7 @@
 {% block adownb_total %}{{data[34].total}}{% endblock %}
 {% block adownb_stun %}{{data[34].stun}}{% endblock %}
 {% block adownb_percent %}{{data[34].percent}}{% endblock %}
+{% block adownb_wpercent %}{{data[34].percent_weak}}{% endblock %}
 {% block adownb_lag %}{{data[34].land_lag}}{% endblock %}
 {% block adownb_ld_fl_spec %}{{data[34].ld_fl_spec}}{% endblock %}
 {% block adownb_notes %}{{data[34].notes}}{% endblock %}
