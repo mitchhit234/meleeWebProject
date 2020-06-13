@@ -7,6 +7,8 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ## To Do
 * Some character data is still missing, need to find a way to extract that info
 
+* Throw data is inaccurate, throw's total frames are based on the weight of the character they are throwing, a note needs to made of that
+
 * Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC))
 
 * Find missing character animation GIFs, such as most Pichu's animations and most character's throws
