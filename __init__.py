@@ -316,10 +316,11 @@ def admin():
         try:
             db.session.add(model)
             db.session.commit()
-            flash(f"Successfully submitted info for {char} {move}")
+            #keep these lines commented, causes errors on deployment server
+            #flash(f"Successfully submitted info for {char} {move}")
         except:
             db.session.commit()
-            flash(f"Successfully updated info for {char} {move}")
+            #flash(f"Successfully updated info for {char} {move}")
 
         return render_template("admin.html")
 
