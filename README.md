@@ -13,6 +13,10 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 
 * Find missing character animation GIFs, such as most Pichu's animations and most character's throws
 
+* Give user the option to go "frame-by-frame" on character GIFs
+
+* Clean up the info page
+
 * Clean up the "Attacks" data table by seperating attacks among ground normals, aerials, grounded specials, and aerial specials 
 
 * Add search bar on homepage for characters, potentially search bar on character pages for attacks
