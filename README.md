@@ -5,22 +5,20 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ![](static/images/logo.png)
 
 ## To Do
-* Most characters still have blank data fields that need to be filled
+* Some character data is still missing, need to find a way to extract that info
 
 * Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC))
 
-* Find missing character animation GIFs, such as all of Pichu's animations and most character's throws
+* Find missing character animation GIFs, such as most Pichu's animations and most character's throws
 
-* Clean up the "Attacks" data table by seperating attacks among ground normals, aerials, grounded specials, and aerial specials
-
-* Toggle some more information off if it does not apply to that character/specific move (such as how multi jabs are by default not shown unless inserted in the data table) 
+* Clean up the "Attacks" data table by seperating attacks among ground normals, aerials, grounded specials, and aerial specials 
 
 * Add search bar on homepage for characters, potentially search bar on character pages for attacks
-
-* Find a way to not have to prompt the user to select mobile/desktop version
 
 * Add more comments to the main python program to improve readability
 
 * Upload ER Diagram of the Database
 
 * Possible CSS stylistic changes
+
+* Add Toggelable Dark Mode
