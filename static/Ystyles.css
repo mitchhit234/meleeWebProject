@@ -149,10 +149,11 @@
 .misc-info{
 	font-size: 130%;
 	color: #000000;
-	margin: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .misc-container{
 	text-align: center;
-	width: 80%;
+	width: 100%;
 }
