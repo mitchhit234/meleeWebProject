@@ -5,11 +5,13 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ![](static/images/logo.png)
 
 ## To Do
+* Site is insecure, need to work on admin security
+
 * Shiek is actually spelled Sheik... need to fix that
 
 * Some character data is still missing, need to find a way to extract that info
 
-* Some character data may be inaccurate, need to do cross-checking (ICs has already been brought up)
+* Some character data may be inaccurate, need to do cross-checking (ICs, young link have already been brought up)
 
 * Throw data is inaccurate, throw's total frames are based on the weight of the character they are throwing, a note needs to made of [that](https://smashboards.com/threads/detailed-throws-techs-and-getups-frame-data.206469/)
 
