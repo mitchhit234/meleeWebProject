@@ -5,6 +5,8 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ![](static/images/logo.png)
 
 ## To Do
+* Shiek is actually spelled Sheik... need to fix that
+
 * Some character data is still missing, need to find a way to extract that info
 
 * Some character data may be inaccurate, need to do cross-checking (ICs has already been brought up)
