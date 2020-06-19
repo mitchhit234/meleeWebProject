@@ -181,7 +181,8 @@
 		<div class='air-percent'>{% block nair_percent %}{% endblock %}
 			{% if data[8].percent_weak %}/ {% block nair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
 		<div class='air-landing-lag'>{% block nair_lag %}{% endblock %} Frames Landing Lag</div>
-		<div class='air-l-cancel-lag'>{% block nair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		{% if data[8].char != "mr._game_&_watch" %}
+		<div class='air-l-cancel-lag'>{% block nair_lcancel %}{% endblock %} Frames L-Cancel Lag</div> {% endif %}
 		<div class='air-acancel'>Won't Auto Cancel Frames {% block nair_acancel1 %}{% endblock %}-{% block nair_acancel2 %}{% endblock %}</div>
 		{% if data[8].notes %} <div class='notes'>Notes - {% block nair_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -196,7 +197,7 @@
 		<div class='air-percent'>{% block fair_percent %}{% endblock %}
 			{% if data[9].percent_weak %}/ {% block fair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
 		<div class='air-landing-lag'>{% block fair_lag %}{% endblock %} Frames Landing Lag</div>
-		<div class='air-l-cancel-lag'>{% block fair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		<div class='air-l-cancel-lag'>{% block fair_lcancel %}{% endblock %} Frames L-Cancel Lag</div>
 		<div class='air-acancel'>Won't Auto Cancel Frames {% block fair_acancel1 %}{% endblock %}-{% block fair_acancel2 %}{% endblock %}</div>
 		{% if data[9].notes %} <div class='notes'>Notes - {% block fair_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -211,7 +212,8 @@
 		<div class='air-percent'>{% block bair_percent %}{% endblock %}
 			{% if data[10].percent_weak %}/ {% block bair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
 		<div class='air-landing-lag'>{% block bair_lag %}{% endblock %} Frames Landing Lag</div>
-		<div class='air-l-cancel-lag'>{% block bair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		{% if data[8].char != "mr._game_&_watch" %}
+		<div class='air-l-cancel-lag'>{% block bair_lcancel %}{% endblock %} Frames L-Cancel Lag</div> {% endif %}
 		<div class='air-acancel'>Won't Auto Cancel Frames {% block bair_acancel1 %}{% endblock %}-{% block bair_acancel2 %}{% endblock %}</div>
 		{% if data[10].notes %} <div class='notes'>Notes - {% block bair_notes %}{% endblock %}</div> {% endif %}
 	</div>
@@ -226,7 +228,8 @@
 		<div class='air-percent'>{% block uair_percent %}{% endblock %}
 			{% if data[11].percent_weak %}/ {% block uair_wpercent %}{% endblock %}{% endif %} % Base Damage</div>
 		<div class='air-landing-lag'>{% block uair_lag %}{% endblock %} Frames Landing Lag</div>
-		<div class='air-l-cancel-lag'>{% block uair_lcancel %}{% endblock %} L-Cancel Lag</div>
+		{% if data[8].char != "mr._game_&_watch" %}
+		<div class='air-l-cancel-lag'>{% block uair_lcancel %}{% endblock %} Frames L-Cancel Lag</div> {% endif %}
 		<div class='air-acancel'>Won't Auto Cancel Frames {% block uair_acancel1 %}{% endblock %}-{% block uair_acancel2 %}{% endblock %}</div>
 		{% if data[11].notes %} <div class='notes'>Notes - {% block uair_notes %}{% endblock %}</div> {% endif %}
 	</div>
