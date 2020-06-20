@@ -14,26 +14,16 @@ print(imageObject.n_frames)
 
 cont = True
 frame = 0
+images = []
 
 # Display individual frames from the loaded animated GIF file
 
-#for frame in range(0,imageObject.n_frames):
-
-    #imageObject.seek(frame)
-
-    #imageObject.show() 
-
-while cont == True:
-
-    cont = input("Continue?")
-
-    if cont != "y":
-        cont = False
-    else:
-        cont = True
-
+for frame in range(0,imageObject.n_frames):
+    
     imageObject.seek(frame)
     imageObject.show()
+    print(imageObject.tell())
+    dummy = input("press enter for next frame")
 
-    frame += 1
+
 

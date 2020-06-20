@@ -31,7 +31,7 @@
 <div class='stat-container'>
 	<div class='move-container'>
 		<div class='movename'>Jab</div>
-		<div class='hitbox'><img src="{% block gif_jab1 %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#" id="button"><img src="{% block gif_jab1 %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jab1_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jab1_active1 %}{% endblock %}-{% block jab1_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jab1_total %}{% endblock %} Total Frames</div>
@@ -471,6 +471,29 @@
 		<div class='misc-info'>Wall Jump: {% block wall_jump %}{% endblock %}</div>
 	</div>
 </div>
+
+<div class="bg-modal">
+	<div class="modal-content">
+		<div class="close" id="close">+</div>
+		<img src="static/images/jigglypuff_SSBM.jpg">
+		<form action="">
+			<a href="#" class="button">Back</a>
+			<a href="#" class="button">Forward</a>
+		</form>
+	</div>		
+</div>
+
+<script type="text/javascript">
+	document.getElementById('button').addEventListener('click', function()
+	{
+		document.querySelector('.bg-modal').style.display = 'flex';
+	});
+
+	document.getElementById('close').addEventListener('click', function()
+	{
+		document.querySelector('.bg-modal').style.display = 'none';
+	});
+</script>
 
 </center>
 </body>
