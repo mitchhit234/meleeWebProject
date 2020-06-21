@@ -44,7 +44,7 @@
 	{% if data[28].start %}
 	<div class='move-container'>
 		<div class='movename'>Jab 2</div>
-		<div class='hitbox'><img src="{% block gif_jab2 %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('bowser')"><img src="{% block gif_jab2 %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jab2_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jab2_active1 %}{% endblock %}-{% block jab2_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jab2_total %}{% endblock %} Total Frames</div>
@@ -475,15 +475,18 @@
 <div class="bg-modal">
 	<div class="modal-content">
 		<div class="close" id="close">+</div>
-		<img src="static/images/jigglypuff_SSBM.jpg">
+		<img id="modImg" src="static/images/jigglypuff_SSBM.jpg">
 		<form action="">
-			<a href="#" class="button">Back</a>
-			<a href="#" class="button">Forward</a>
+			<a href="#" class="button" onclick="backward()">Back</a>
+			<a href="#" class="button" onclick="forward()">Forward</a>
 		</form>
 	</div>		
 </div>
 
 <script type="text/javascript">
+	var currentFrame = 1
+	var char = ""
+
 	document.getElementById('button').addEventListener('click', function()
 	{
 		document.querySelector('.bg-modal').style.display = 'flex';
@@ -492,7 +495,40 @@
 	document.getElementById('close').addEventListener('click', function()
 	{
 		document.querySelector('.bg-modal').style.display = 'none';
+		currentFrame = 0;
 	});
+
+	function loadMod(val)
+	{
+		document.querySelector('.bg-modal').style.display = 'flex';
+		char = val
+		img_path = generate_path(currentFrame, char);
+		document.getElementById("modImg").src = img_path;
+	}
+
+	function backward()
+	{
+		currentFrame--;
+		img_path = generate_path(currentFrame, char);
+		document.getElementById("modImg").src = img_path;
+	}
+
+	function forward()
+	{
+		currentFrame++;
+		img_path = generate_path(currentFrame, char);
+		document.getElementById("modImg").src = img_path;
+	}
+
+	function generate_path(num, char)
+	{
+		img_path = "static/gif_stills/";
+		img_path += char + "/";
+		img_path += num.toString();
+		img_path += ".gif";
+		return img_path;
+	}
+
 </script>
 
 </center>
