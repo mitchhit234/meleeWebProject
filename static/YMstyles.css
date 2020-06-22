@@ -8,7 +8,7 @@ body{
 }
 .header{
 	font-size: 600%;
-	font-family: Verdana;
+	font-family: Verdana, Arial, times-new-roman;
 	font-weight: bold;
 	background-color: #ffe524;
 	color: #fcfcfc;	
@@ -152,4 +152,64 @@ body{
 	font-size: 300%;
 	color: #000000;
 	margin: 15px;
+}
+
+.frame-num{
+	font-family: Verdana, Arial;
+	font-weight: bold;
+
+}
+
+.bg-modal{
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: none;
+}
+
+.modal-content{
+	width: 75%;
+	min-height: 20%;
+	max-height: 80%;
+	background-color: white;
+	text-align: center;
+	align-items: center;
+	border-radius: 10px;
+	padding: 30px;
+	position: absolute;
+
+}
+
+.fbf-img{
+	width: 85%;
+	border-radius: 10px;
+}
+
+.close{
+	position: absolute;
+	top: 0;
+	right: 20px;
+	font-size: 100px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.button {
+	background-color: #00994d;
+	border: none;
+	color: white;
+	padding: 6% 8%;
+	width: 25%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 50px;
+	margin: 30px 30px;
+	cursor: pointer;
 }

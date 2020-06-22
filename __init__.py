@@ -334,7 +334,7 @@ def char(c, hits):
     data = format(i)
     i = i.upper()
     i = i.replace("_", " ")
-    return render_template("char.html", data=data, name=i, img=img, style=boxes, gif=gif, box=boxes)
+    return render_template("char.html", data=data, name=i, img=img, style=boxes, gif=gif, box=boxes, path=c)
 
 
 @app.route("/<c>", methods=["POST", "GET"])
@@ -391,5 +391,5 @@ def format(name):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
 

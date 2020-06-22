@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='UTF-8'>
+  <meta charset='UTF-8' name="viewport" content="user-scalable=no">
   <title>{{name}}</title>
   <link rel="stylesheet" href="static/styles.css">
   <link rel="stylesheet" media="screen and (max-device-width: 1002px)" href="static/{{style}}Mstyles.css" />
@@ -31,7 +31,7 @@
 <div class='stat-container'>
 	<div class='move-container'>
 		<div class='movename'>Jab</div>
-		<div class='hitbox'><a href="#" id="button"><img src="{% block gif_jab1 %}{% endblock %}" class="gif"></div></a>
+		<div class='hitbox'><a href="#", onclick="loadMod('jab1')"><img src="{% block gif_jab1 %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jab1_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jab1_active1 %}{% endblock %}-{% block jab1_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jab1_total %}{% endblock %} Total Frames</div>
@@ -44,7 +44,7 @@
 	{% if data[28].start %}
 	<div class='move-container'>
 		<div class='movename'>Jab 2</div>
-		<div class='hitbox'><a href="#", onclick="loadMod('bowser')"><img src="{% block gif_jab2 %}{% endblock %}" class="gif"></div></a>
+		<div class='hitbox'><a href="#", onclick="loadMod('jab2')"><img src="{% block gif_jab2 %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jab2_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jab2_active1 %}{% endblock %}-{% block jab2_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jab2_total %}{% endblock %} Total Frames</div>
@@ -58,7 +58,7 @@
 	{% if data[29].start %}
 	<div class='move-container'>
 		<div class='movename'>Jab 3</div>
-		<div class='hitbox'><img src="{% block gif_jab3 %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('jab3')"><img src="{% block gif_jab3 %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jab3_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jab3_active1 %}{% endblock %}-{% block jab3_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jab3_total %}{% endblock %} Total Frames</div>
@@ -72,7 +72,7 @@
 	{% if data[30].start %}
 	<div class='move-container'>
 		<div class='movename'>Rapid Jab</div>
-		<div class='hitbox'><img src="{% block gif_jabr %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('rjab')"><img src="{% block gif_jabr %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block jabr_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block jabr_active1 %}{% endblock %}-{% block jabr_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block jabr_total %}{% endblock %} Total Frames</div>
@@ -85,7 +85,7 @@
 	{% endif %}
 	<div class='move-container'>
 		<div class='movename'>Forward Tilt</div>
-		<div class='hitbox'><img src="{% block gif_ftilt %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('ftilt')"><img src="{% block gif_ftilt %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block ftilt_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block ftilt_active1 %}{% endblock %}-{% block ftilt_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block ftilt_total %}{% endblock %} Total Frames</div>
@@ -97,7 +97,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Up Tilt</div>
-		<div class='hitbox'><img src="{% block gif_utilt %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('utilt')"><img src="{% block gif_utilt %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block utilt_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block utilt_active1 %}{% endblock %}-{% block utilt_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block utilt_total %}{% endblock %} Total Frames</div>
@@ -109,7 +109,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Down Tilt</div>
-		<div class='hitbox'><img src="{% block gif_dtilt %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dtilt')"><img src="{% block gif_dtilt %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block dtilt_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block dtilt_active1 %}{% endblock %}-{% block dtilt_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block dtilt_total %}{% endblock %} Total Frames</div>
@@ -121,7 +121,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Dash Attack</div>
-		<div class='hitbox'><img src="{% block gif_dattack %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dattack')"><img src="{% block gif_dattack %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block dash_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block dash_active1 %}{% endblock %}-{% block dash_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block dash_total %}{% endblock %} Total Frames</div>
@@ -133,7 +133,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Forward Smash</div>
-		<div class='hitbox'><img src="{% block gif_fsmash %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('fsmash')"><img src="{% block gif_fsmash %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block fsmash_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block fsmash_active1 %}{% endblock %}-{% block fsmash_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block fsmash_total %}{% endblock %} Total Frames</div>
@@ -145,7 +145,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Up Smash</div>
-		<div class='hitbox'><img src="{% block gif_usmash %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('usmash')"><img src="{% block gif_usmash %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block usmash_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block usmash_active1 %}{% endblock %}-{% block usmash_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block usmash_total %}{% endblock %} Total Frames</div>
@@ -157,7 +157,7 @@
 	</div>
 	<div class='move-container'>
 		<div class='movename'>Down Smash</div>
-		<div class='hitbox'><img src="{% block gif_dsmash %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dsmash')"><img src="{% block gif_dsmash %}{% endblock %}" class="gif"></div></a>
 		<div class='startup'>{% block dsmash_start %}{% endblock %} Frame Startup</div>
 		<div class='active-frames'>Active Frames {% block dsmash_active1 %}{% endblock %}-{% block dsmash_active2 %}{% endblock %}</div>
 		<div class='total-frames'>{% block dsmash_total %}{% endblock %} Total Frames</div>
@@ -172,7 +172,7 @@
 <div class='stat-container'>
 	<div class='air-move-container'>
 		<div class='air-movename'>Neutral Air</div>
-		<div class='hitbox'><img src="{% block gif_nair %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('nair')"><img src="{% block gif_nair %}{% endblock %}" class="gif"></div></a>
 		<div class='air-startup'>{% block nair_start %}{% endblock %} Frame Startup</div>
 		<div class='air-active-frames'>Active Frames {% block nair_active1 %}{% endblock %}-{% block nair_active2 %}{% endblock %}</div>
 		<div class='air-total-frames'>{% block nair_total %}{% endblock %} Total Frames</div>
@@ -188,7 +188,7 @@
 	</div>
 	<div class='air-move-container'>
 		<div class='air-movename'>Forward Air</div>
-		<div class='hitbox'><img src="{% block gif_fair %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('fair')"><img src="{% block gif_fair %}{% endblock %}" class="gif"></div></a>
 		<div class='air-startup'>{% block fair_start %}{% endblock %} Frame Startup</div>
 		<div class='air-active-frames'>Active Frames {% block fair_active1 %}{% endblock %}-{% block fair_active2 %}{% endblock %}</div>
 		<div class='air-total-frames'>{% block fair_total %}{% endblock %} Total Frames</div>
@@ -203,7 +203,7 @@
 	</div>
 	<div class='air-move-container'>
 		<div class='air-movename'>Back Air</div>
-		<div class='hitbox'><img src="{% block gif_bair %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('bair')"><img src="{% block gif_bair %}{% endblock %}" class="gif"></div></a>
 		<div class='air-startup'>{% block bair_start %}{% endblock %} Frame Startup</div>
 		<div class='air-active-frames'>Active Frames {% block bair_active1 %}{% endblock %}-{% block bair_active2 %}{% endblock %}</div>
 		<div class='air-total-frames'>{% block bair_total %}{% endblock %} Total Frames</div>
@@ -219,7 +219,7 @@
 	</div>
 	<div class='air-move-container'>
 		<div class='air-movename'>Up Air</div>
-		<div class='hitbox'><img src="{% block gif_uair %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('uair')"><img src="{% block gif_uair %}{% endblock %}" class="gif"></div></a>
 		<div class='air-startup'>{% block uair_start %}{% endblock %} Frame Startup</div>
 		<div class='air-active-frames'>Active Frames {% block uair_active1 %}{% endblock %}-{% block uair_active2 %}{% endblock %}</div>
 		<div class='air-total-frames'>{% block uair_total %}{% endblock %} Total Frames</div>
@@ -235,7 +235,7 @@
 	</div>
 	<div class='air-move-container'>
 		<div class='air-movename'>Down Air</div>
-		<div class='hitbox'><img src="{% block gif_dair %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dair')"><img src="{% block gif_dair %}{% endblock %}" class="gif"></div></a>
 		<div class='air-startup'>{% block dair_start %}{% endblock %} Frame Startup</div>
 		<div class='air-active-frames'>Active Frames {% block dair_active1 %}{% endblock %}-{% block dair_active2 %}{% endblock %}</div>
 		<div class='air-total-frames'>{% block dair_total %}{% endblock %} Total Frames</div>
@@ -253,7 +253,7 @@
 <div class='stat-container'>
 	<div class='special-move-container'>
 		<div class='special-movename'>Neutral B</div>
-		<div class='hitbox'><img src="{% block gif_neutralb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('neutralb')"><img src="{% block gif_neutralb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block neutralb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block neutralb_active1 %}{% endblock %}-{% block neutralb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block neutralb_total %}{% endblock %} Total Frames</div>
@@ -265,7 +265,7 @@
 	{% if data[31].start %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Aerial Neutral B</div>
-		<div class='hitbox'><img src="{% block gif_aneutralb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('a-neutralb')"><img src="{% block gif_aneutralb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block aneutralb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block aneutralb_active1 %}{% endblock %}-{% block aneutralb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block aneutralb_total %}{% endblock %} Total Frames</div>
@@ -279,7 +279,7 @@
 	{% endif %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Side B</div>
-		<div class='hitbox'><img src="{% block gif_sideb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('sideb')"><img src="{% block gif_sideb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block sideb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block sideb_active1 %}{% endblock %}-{% block sideb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block sideb_total %}{% endblock %} Total Frames</div>
@@ -291,7 +291,7 @@
 	{% if data[32].start %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Aerial Side B</div>
-		<div class='hitbox'><img src="{% block gif_asideb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('a-sideb')"><img src="{% block gif_asideb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block asideb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block asideb_active1 %}{% endblock %}-{% block asideb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block asideb_total %}{% endblock %} Total Frames</div>
@@ -305,7 +305,7 @@
 	{% endif %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Up B</div>
-		<div class='hitbox'><img src="{% block gif_upb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('upb')"><img src="{% block gif_upb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block upb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block upb_active1 %}{% endblock %}-{% block upb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block upb_total %}{% endblock %} Total Frames</div>
@@ -319,7 +319,7 @@
 	{% if data[33].start %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Aerial Up B</div>
-		<div class='hitbox'><img src="{% block gif_aupb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('a-upb')"><img src="{% block gif_aupb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block aupb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block aupb_active1 %}{% endblock %}-{% block aupb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block aupb_total %}{% endblock %} Total Frames</div>
@@ -333,7 +333,7 @@
 	{% endif %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Down B</div>
-		<div class='hitbox'><img src="{% block gif_downb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('downb')"><img src="{% block gif_downb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block downb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block downb_active1 %}{% endblock %}-{% block downb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block downb_total %}{% endblock %} Total Frames</div>
@@ -345,7 +345,7 @@
 	{% if data[34].start %}
 	<div class='special-move-container'>
 		<div class='special-movename'>Aerial Down B</div>
-		<div class='hitbox'><img src="{% block gif_adownb %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('a-downb')"><img src="{% block gif_adownb %}{% endblock %}" class="gif"></div></a>
 		<div class='special-startup'>{% block adownb_start %}{% endblock %} Frame Startup</div>
 		<div class='special-active-frames'>Active Frames {% block adownb_active1 %}{% endblock %}-{% block adownb_active2 %}{% endblock %}</div>
 		<div class='special-total-frames'>{% block adownb_total %}{% endblock %} Total Frames</div>
@@ -362,14 +362,14 @@
 <div class='stat-container'>
 	<div class='grab-container'>
 		<div class='grab-movename'>Standing Grab</div>
-		<div class='hitbox'><img src="{% block gif_sgrab %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('grab')"><img src="{% block gif_sgrab %}{% endblock %}" class="gif"></div></a>
 		<div class='grab-startup'>{% block grab_start %}{% endblock %} Frame Startup</div>
 		<div class='grab-total-frames'>{% block grab_total %}{% endblock %} Total Frames</div>
 		{% if data[17].notes %} <div class='notes'>Notes - {% block grab_notes %}{% endblock %}</div> {% endif %}
 	</div>
 	<div class='grab-container'>
 		<div class='grab-movename'>Dash Grab</div>
-		<div class='hitbox'><img src="{% block gif_dgrab %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dgrab')"><img src="{% block gif_dgrab %}{% endblock %}" class="gif"></div></a>
 		<div class='grab-startup'>{% block dgrab_start %}{% endblock %} Frame Startup</div>
 		<div class='grab-total-frames'>{% block dgrab_total %}{% endblock %} Total Frames</div>
 		{% if data[18].notes %} <div class='notes'>Notes - {% block dgrab_notes %}{% endblock %}</div> {% endif %}
@@ -380,7 +380,7 @@
 	<div class='throw-container'>
 		<div class='throw-movename'>Forward Throw</div>
 		{% if name == "MEWTWO" %}
-		<div class='hitbox'><img src="{% block gif_fthrow %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('fthrow')"><img src="{% block gif_fthrow %}{% endblock %}" class="gif"></div></a>
 		{% endif %}
 		<div class='throw-startup'>{% block fthrow_start %}{% endblock %} Frame Startup</div>
 		<div class='throw-total-frames'>Active Frames {% block fthrow_active1 %}{% endblock %}-{% block fthrow_active2 %}{% endblock %}</div>
@@ -391,7 +391,7 @@
 	<div class='throw-container'>
 		<div class='throw-movename'>Back Throw</div>
 		{% if name == "MEWTWO" %}
-		<div class='hitbox'><img src="{% block gif_bthrow %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('bthrow')"><img src="{% block gif_bthrow %}{% endblock %}" class="gif"></div></a>
 		{% endif %}
 		<div class='throw-startup'>{% block bthrow_start %}{% endblock %} Frame Startup</div>
 		<div class='throw-total-frames'>Active Frames {% block bthrow_active1 %}{% endblock %}-{% block bthrow_active2 %}{% endblock %}</div>
@@ -402,7 +402,7 @@
 	<div class='throw-container'>
 		<div class='throw-movename'>Down Throw</div>
 		{% if name == "MEWTWO" %}
-		<div class='hitbox'><img src="{% block gif_dthrow %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('dthrow')"><img src="{% block gif_dthrow %}{% endblock %}" class="gif"></div></a>
 		{% endif %}
 		<div class='throw-startup'>{% block dthrow_start %}{% endblock %} Frame Startup</div>
 		<div class='throw-total-frames'>Active Frames {% block dthrow_active1 %}{% endblock %}-{% block dthrow_active2 %}{% endblock %}</div>
@@ -413,7 +413,7 @@
 	<div class='throw-container'>
 		<div class='throw-movename'>Up Throw</div>
 		{% if name == "MEWTWO" %}
-		<div class='hitbox'><img src="{% block gif_uthrow %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('uthrow')"><img src="{% block gif_uthrow %}{% endblock %}" class="gif"></div></a>
 		{% endif %}
 		<div class='throw-startup'>{% block uthrow_start %}{% endblock %} Frame Startup</div>
 		<div class='throw-total-frames'>Active Frames {% block uthrow_active1 %}{% endblock %}-{% block uthrow_active2 %}{% endblock %}</div>
@@ -426,7 +426,7 @@
 <div class='stat-container'>
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Spot Dodge</div>
-		<div class='hitbox'><img src="{% block gif_sdodge %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('sdodge')"><img src="{% block gif_sdodge %}{% endblock %}" class="gif"></div></a>
 		<div class='dodge-startup'>{% block spotdodge_start %}{% endblock %} Frame Startup</div>
 		<div class='dodge-inv-frames'>Inv. Frames {% block spotdodge_active %}{% endblock %}-{% block spotdodge_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block spotdodge_total %}{% endblock %} Total Frames</div>
@@ -434,7 +434,7 @@
 	</div>
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Backward Roll</div>
-		<div class='hitbox'><img src="{% block gif_broll %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('broll')"><img src="{% block gif_broll %}{% endblock %}" class="gif"></div></a>
 		<div class='dodge-startup'>{% block broll_start %}{% endblock %} Frame Startup</div>
 		<div class='dodge-inv-frames'>Inv. Frames {% block broll_active %}{% endblock %}-{% block broll_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block broll_total %}{% endblock %} Total Frames</div>
@@ -442,7 +442,7 @@
 	</div>
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Forward Roll</div>
-		<div class='hitbox'><img src="{% block gif_froll %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('froll')"><img src="{% block gif_froll %}{% endblock %}" class="gif"></div></a>
 		<div class='dodge-startup'>{% block froll_start %}{% endblock %} Frame Startup</div>
 		<div class='dodge-inv-frames'>Inv. Frames {% block froll_active %}{% endblock %}-{% block froll_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block froll_total %}{% endblock %} Total Frames</div>
@@ -450,7 +450,7 @@
 	</div>
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Air Dodge</div>
-		<div class='hitbox'><img src="{% block gif_adodge %}{% endblock %}" class="gif"></div>
+		<div class='hitbox'><a href="#", onclick="loadMod('adodge')"><img src="{% block gif_adodge %}{% endblock %}" class="gif"></div></a>
 		<div class='dodge-startup'>{% block airdodge_start %}{% endblock %} Frame Startup</div>
 		<div class='dodge-inv-frames'>Inv.Frames {% block airdodge_active %}{% endblock %}-{% block airdodge_inv %}{% endblock %}</div>
 		<div class='dodge-total-frames'>{% block airdodge_total %}{% endblock %} Total Frames</div>
@@ -475,22 +475,21 @@
 <div class="bg-modal">
 	<div class="modal-content">
 		<div class="close" id="close">+</div>
-		<img id="modImg" src="static/images/jigglypuff_SSBM.jpg">
-		<form action="">
-			<a href="#" class="button" onclick="backward()">Back</a>
-			<a href="#" class="button" onclick="forward()">Forward</a>
-		</form>
+
+			<img class = "fbf-img" id="modImg" src="" onError="reset()">
+			<form action="">
+				<a href="#" class="button" onclick="backward()">Back</a>
+				<a href="#" class="button" onclick="forward()">Forward</a>
+			</form>
+			<div class="misc-info">Current Frame:  <span id="myText"></span>
+		</div>
 	</div>		
 </div>
 
 <script type="text/javascript">
-	var currentFrame = 1
-	var char = ""
-
-	document.getElementById('button').addEventListener('click', function()
-	{
-		document.querySelector('.bg-modal').style.display = 'flex';
-	});
+	var currentFrame = 0
+	var char = "{{path}}"
+	var move = ""
 
 	document.getElementById('close').addEventListener('click', function()
 	{
@@ -501,32 +500,44 @@
 	function loadMod(val)
 	{
 		document.querySelector('.bg-modal').style.display = 'flex';
-		char = val
-		img_path = generate_path(currentFrame, char);
+		move = val
+		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
 	function backward()
 	{
 		currentFrame--;
-		img_path = generate_path(currentFrame, char);
+		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
 	function forward()
 	{
 		currentFrame++;
-		img_path = generate_path(currentFrame, char);
+		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
-	function generate_path(num, char)
+	function generate_path(num)
 	{
 		img_path = "static/gif_stills/";
 		img_path += char + "/";
+		img_path += move + "/"
 		img_path += num.toString();
-		img_path += ".gif";
+		img_path += ".png";
 		return img_path;
+	}
+
+	function reset()
+	{
+		currentFrame = 0;
+		img_path = generate_path(currentFrame);
+		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
 </script>
