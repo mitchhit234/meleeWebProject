@@ -7,6 +7,8 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ## To Do
 * Update admin security
 
+* Keep an eye on frame-by-frame viewer, fix any bugs associated
+
 * Some character data is still missing, need to find a way to extract that info
 
 * Some character data may be inaccurate, need to do cross-checking 
@@ -16,11 +18,6 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 * Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC))
 
 * Find missing character animation GIFs, such as most Pichu's animations and most character's throws
-
-* Update apperance on frame-by-frame modal, add instructions to info page
-
-
-* Clean up the "Attacks" data table by seperating attacks among ground normals, aerials, grounded specials, and aerial specials 
 
 * Add search bar on homepage for characters, potentially search bar on character pages for attacks
 
