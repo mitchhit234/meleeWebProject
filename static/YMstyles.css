@@ -1,3 +1,8 @@
+*{
+	touch-action: manipulation;
+	-ms-touch-action: manipulation;
+}
+
 body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	margin: 0;
@@ -177,7 +182,7 @@ body{
 	width: 75%;
 	min-height: 20%;
 	max-height: 80%;
-	background-color: white;
+	background-color: #3c647d;
 	text-align: center;
 	align-items: center;
 	border-radius: 10px;
@@ -192,6 +197,7 @@ body{
 }
 
 .close{
+	color: white;
 	position: absolute;
 	top: 0;
 	right: 20px;
@@ -209,7 +215,22 @@ body{
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 50px;
+	font-size: 300%;
+	font-weight: bold;
 	margin: 30px 30px;
 	cursor: pointer;
+}
+
+.mod_move_name{
+	font-size: 400%;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #fcfcfc;
+}
+
+.c-frame{
+	font-size: 300%;
+    font-weight: bold;
+    margin: 1%;
+    color: #fcfcfc;
 }

@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	touch-action: manipulation;
 	
 }
 
@@ -174,8 +175,8 @@
 .modal-content{
 	width: 600px;
 	min-height: 300px;
-	max-height: 500px;
-	background-color: white;
+	max-height: 800px;
+	background-color: #3c647d;
 	text-align: center;
 	align-items: center;
 	border-radius: 4px;
@@ -184,7 +185,13 @@
 
 }
 
+.fbf-img{
+	width: 85%;
+	border-radius: 10px;
+}
+
 .close{
+	color: white;
 	position: absolute;
 	top: 0;
 	right: 20px;
@@ -202,7 +209,22 @@
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 150%;
+	font-weight: bold;
 	margin: 15px 8px;
 	cursor: pointer;
   }
+
+.mod_move_name{
+	font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 2.5%;
+    color: #fcfcfc;
+}
+
+.c-frame{
+	font-size: 150%;
+    font-weight: bold;
+    margin-top: 2.5%;
+    color: #fcfcfc;
+}
