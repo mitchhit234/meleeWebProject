@@ -35,6 +35,11 @@
 
   	}
 
+    .input {
+      width: 300px;
+      font-size: 150%;
+    }
+
     .info{
       width: 150px;
       filter: invert(63%) sepia(53%) saturate(701%) hue-rotate(213deg) brightness(100%) contrast(103%);
@@ -187,40 +192,53 @@
   </div>
   
 </div>
+<br />
+<input class="input" placeholder="Search for character name..." type="text" onkeyup="filterChars(this.value)">
 
 
 
 <div class="char-grid">
-    <a href="captain_falcon"><img src="static/images/captain_falcon_SSBM.jpg" class="images"></a>
-    <a href="donkey_kong"><img src="static/images/donkey_kong_SSBM.jpg" class="images"></a>
-    <a href="dr._mario"><img src="static/images/dr._mario_SSBM.jpg" class="images"></a>
-    <a href="falco"><img src="static/images/falco_SSBM.jpg" class="images"></a>
-    <a href="fox"><img src="static/images/fox_SSBM.jpg" class="images"></a>
-    <a href="ganondorf"><img src="static/images/ganondorf_SSBM.jpg" class="images"></a>
-    <a href="ice_climbers"><img src="static/images/ice_climbers_SSBM.jpg" class="images"></a>
-    <a href="kirby"><img src="static/images/kirby_SSBM.jpg" class="images"></a>
-    <a href="bowser"><img src="static/images/bowser_SSBM.jpg" class="images"></a>
-    <a href="link"><img src="static/images/link_SSBM.jpg" class="images"></a>
-    <a href="luigi"><img src="static/images/luigi_SSBM.jpg" class="images"></a>
-    <a href="mario"><img src="static/images/mario_SSBM.jpg" class="images"></a>
-    <a href="marth"><img src="static/images/marth_SSBM.jpg" class="images"></a>
-    <a href="mewtwo"><img src="static/images/mewtwo_SSBM.jpg" class="images"></a>
-    <a href="mr._game_&_watch"><img src="static/images/mr._game_&_watch_SSBM.jpg" class="images"></a>
-    <a href="ness"><img src="static/images/ness_SSBM.jpg" class="images"></a>
-    <a href="peach"><img src="static/images/peach_SSBM.jpg" class="images"></a>
-    <a href="pichu"><img src="static/images/pichu_SSBM.jpg" class="images"></a>
-    <a href="pikachu"><img src="static/images/pikachu_SSBM.jpg" class="images"></a>
-    <a href="jigglypuff"><img src="static/images/jigglypuff_SSBM.jpg" class="images"></a>
-    <a href="roy"><img src="static/images/roy_SSBM.jpg" class="images"></a>
-    <a href="samus"><img src="static/images/samus_SSBM.jpg" class="images"></a>
-    <a href="sheik"><img src="static/images/sheik_SSBM.jpg" class="images"></a>
-    <a href="yoshi"><img src="static/images/yoshi_SSBM.jpg" class="images"></a>
-    <a href="young_link"><img src="static/images/young_link_SSBM.jpg" class="images"></a>
-    <a href="zelda"><img src="static/images/zelda_SSBM.jpg" class="images"></a>
+    <a href="captain_falcon" name="captain falcon"><img src="static/images/captain_falcon_SSBM.jpg" class="images"></a>
+    <a href="donkey_kong" name="donkey kong,dk"><img src="static/images/donkey_kong_SSBM.jpg" class="images"></a>
+    <a href="dr._mario" name="dr. mario,dr mario,doc"><img src="static/images/dr._mario_SSBM.jpg" class="images"></a>
+    <a href="falco" name="falco"><img src="static/images/falco_SSBM.jpg" class="images"></a>
+    <a href="fox" name="fox"><img src="static/images/fox_SSBM.jpg" class="images"></a>
+    <a href="ganondorf" name="ganondorf"><img src="static/images/ganondorf_SSBM.jpg" class="images"></a>
+    <a href="ice_climbers" name="ice climbers,icies"><img src="static/images/ice_climbers_SSBM.jpg" class="images"></a>
+    <a href="kirby" name="kirby"><img src="static/images/kirby_SSBM.jpg" class="images"></a>
+    <a href="bowser" name="bowser"><img src="static/images/bowser_SSBM.jpg" class="images"></a>
+    <a href="link" name="link"><img src="static/images/link_SSBM.jpg" class="images"></a>
+    <a href="luigi" name="luigi"><img src="static/images/luigi_SSBM.jpg" class="images"></a>
+    <a href="mario" name="mario"><img src="static/images/mario_SSBM.jpg" class="images"></a>
+    <a href="marth" name="marth"><img src="static/images/marth_SSBM.jpg" class="images"></a>
+    <a href="mewtwo" name="mewtwo"><img src="static/images/mewtwo_SSBM.jpg" class="images"></a>
+    <a href="mr._game_&_watch" name="game & watch,game&watch,game and watch,mr game & watch,g&w"><img src="static/images/mr._game_&_watch_SSBM.jpg" class="images"></a>
+    <a href="ness" name="ness"><img src="static/images/ness_SSBM.jpg" class="images"></a>
+    <a href="peach" name="peach"><img src="static/images/peach_SSBM.jpg" class="images"></a>
+    <a href="pichu" name="pichu"><img src="static/images/pichu_SSBM.jpg" class="images"></a>
+    <a href="pikachu" name="pikachu"><img src="static/images/pikachu_SSBM.jpg" class="images"></a>
+    <a href="jigglypuff" name="jigglypuff"><img src="static/images/jigglypuff_SSBM.jpg" class="images"></a>
+    <a href="roy" name="roy"><img src="static/images/roy_SSBM.jpg" class="images"></a>
+    <a href="samus" name="samus"><img src="static/images/samus_SSBM.jpg" class="images"></a>
+    <a href="sheik" name="sheik"><img src="static/images/sheik_SSBM.jpg" class="images"></a>
+    <a href="yoshi" name="yoshi"><img src="static/images/yoshi_SSBM.jpg" class="images"></a>
+    <a href="young_link" name="young link,yl"><img src="static/images/young_link_SSBM.jpg" class="images"></a>
+    <a href="zelda" name="zelda"><img src="static/images/zelda_SSBM.jpg" class="images"></a>
 </div>
 
 
 </body>
+
+<script>
+const charGrid = document.querySelector('.char-grid');
+const links = Array.from(charGrid.children);
+  function filterChars(input) {
+    charGrid.innerHTML = "";
+    links.filter(link => link.name.includes(input.toLowerCase())).forEach(link => {
+      charGrid.appendChild(link);
+    });
+  }
+</script>
 </div>
 </center>
 </html>
