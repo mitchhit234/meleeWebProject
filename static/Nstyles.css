@@ -42,6 +42,8 @@
 .go_back, .hits{
 	font-size: 2.5vh;
 	font-weight: bold;
+	text-shadow: 0.5px 0.5px grey;
+	color: #616161;
 	flex-shrink: 1;
 	list-style: none;
 	padding: 5px;
@@ -62,8 +64,28 @@
 	border-color: white;
 	background: -webkit-linear-gradient(#00c0ff, #00994d);
 	max-height: 105%;
-
 }
+
+.navbar{
+	font-size: 200%;
+	font-weight: bold;
+	margin: 40px;
+}
+
+.navbar-element{
+	display: inline-block;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	text-decoration: none;
+	text-shadow: 0.5px 0.5px grey;
+	color: #616161;
+	padding: 20px;
+}
+
+.navbar-element:hover{
+	background-color: #00c0ff;
+}
+
 .stat-container{
 	max-width: 1920px;
 	display: flex;

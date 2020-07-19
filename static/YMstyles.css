@@ -35,12 +35,34 @@ body{
 	background: -webkit-linear-gradient(#00c0ff, #00994d);
 }
 
+.navbar{
+	font-size: 300%;
+	font-weight: bold;
+	margin: 40px;
+}
+
+.navbar-element{
+	display: inline-block;
+	margin: 0.5%;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+	text-decoration: none;
+	text-shadow: 0.5px 0.5px grey;
+	color: #616161;
+	padding: 20px;
+}
+
+.navbar-element:hover{
+	background-color: #00c0ff;
+}
+
 
 
 .go_back, .hits{
 	font-size: 300%;
 	padding-top: 1%;
 	padding-bottom: 1%;
+	text-shadow: 0.5px 0.5px grey;
 	font-weight: bold;
 	font-family: Verdana, fantasy;
 	border-radius: 10px;

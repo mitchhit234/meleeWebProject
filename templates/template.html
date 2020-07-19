@@ -27,7 +27,17 @@
 	<p><input type="submit" name="submit_button" value=" Select Another Character " class="go_back"/></p>
 </form>
 </div>
-<div class='move-group'>Ground Attacks</div>
+
+<div class='navbar'>
+<a href="#ground-group" class="navbar-element">Ground Attacks</a>
+<a href="#air-group" class="navbar-element">Aerial Attacks</a>
+<a href="#special-group" class="navbar-element">Special Attacks</a>
+<a href="#grab-group" class="navbar-element">Grabs</a>
+<a href="#throw-group" class="navbar-element">Throws</a>
+<a href="#dodge-group" class="navbar-element">Dodges/Rolls</a>
+</div>
+
+<div class='move-group', id="ground-group">Ground Attacks</div>
 <div class='stat-container'>
 	<div class='move-container'>
 		<div class='movename'>Jab</div>
@@ -168,7 +178,7 @@
 		{% if data[7].notes %} <div class='notes'>Notes - {% block dsmash_notes %}{% endblock %}</div> {% endif %}
 	</div>	
 </div>
-<div class='move-group'>Aerial Attacks</div>
+<div class='move-group', id="air-group">Aerial Attacks</div>
 <div class='stat-container'>
 	<div class='air-move-container'>
 		<div class='air-movename'>Neutral Air</div>
@@ -249,7 +259,7 @@
 		{% if data[12].notes %} <div class='notes'>Notes - {% block dair_notes %}{% endblock %}</div> {% endif %}
 	</div>
 </div>
-<div class='move-group'>Special Attacks</div>
+<div class='move-group', id="special-group">Special Attacks</div>
 <div class='stat-container'>
 	<div class='special-move-container'>
 		<div class='special-movename'>Neutral B</div>
@@ -358,7 +368,7 @@
 	</div>
 	{% endif %}
 </div>
-<div class='move-group'>Grabs</div>
+<div class='move-group', id="grab-group">Grabs</div>
 <div class='stat-container'>
 	<div class='grab-container'>
 		<div class='grab-movename'>Standing Grab</div>
@@ -375,7 +385,7 @@
 		{% if data[18].notes %} <div class='notes'>Notes - {% block dgrab_notes %}{% endblock %}</div> {% endif %}
 	</div>
 </div>
-<div class='move-group'>Throws</div>
+<div class='move-group', id="throw-group">Throws</div>
 <div class='stat-container'>
 	<div class='throw-container'>
 		<div class='throw-movename'>Forward Throw</div>
@@ -422,7 +432,7 @@
 		{% if data[23].notes %} <div class='notes'>Notes - {% block uthrow_notes %}{% endblock %}</div> {% endif %}
 	</div>
 </div>
-<div class='move-group'>Dodges/Rolls</div>
+<div class='move-group', id="dodge-group">Dodges/Rolls</div>
 <div class='stat-container'>
 	<div class='dodge-container'>
 		<div class='dodge-movename'>Spot Dodge</div>
@@ -458,7 +468,7 @@
 		{% if data[27].notes %} <div class='notes'>Notes - {% block airdodge_notes %}{% endblock %}</div> {% endif %}
 	</div>
 </div>
-<div class='move-group'>Miscellaneous Info</div>
+<div class='move-group', id="misc-group">Miscellaneous Info</div>
 <div class='stat-container'>
 	<div class='misc-container'>
 		<div class='misc-info'>Weight: {% block weight %}{% endblock %}</div>
