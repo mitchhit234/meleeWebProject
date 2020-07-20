@@ -5,6 +5,8 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 ![](static/images/logo.png)
 
 ## To Do
+* Looking to add data in the future, some possibilites include ledge, tech, and hitstun frame data, as well as frame advantage for moves on shield/crouch cancelling. Data added will mostly come down to what else I am able to find/am given at the moment since I'm not very well accustomed to data mining
+
 * Update admin security
 
 * Keep an eye on frame-by-frame viewer, fix any bugs associated
