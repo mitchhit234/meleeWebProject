@@ -76,14 +76,14 @@
     	border-radius: 20px;
     }
 
-    @media (max-device-width: 1001px)
+    @media (max-device-width: 1001px) {
     .images{
       width: 40%;
     }
     .images:hover{
     	border-color: #ffea00;
     	opacity: 0.75;
-
+      }
     }
 
     .modalHead{
@@ -110,8 +110,6 @@
       transition: opacity 400ms ease-in;
       pointer-events: none;
     }
-
-
 
     .modalDialog:target {
       opacity:1;
@@ -154,7 +152,7 @@
 }
 
 
-  </style>
+</style>
 </head>
 <center>
 <div class=c>
@@ -166,11 +164,13 @@
 
 <img src='static/images/logo.png' class="logo">
 
-<a href="#openModal"><img src='static/images/info.png' class='info'></a>
+<a href="#modal">
+  <input type="image" src="static/images/info.png" name="infoBtn" class="info" id="infoBtn" />
+</a>
 
-<div id="openModal" class="modalDialog">
+<div id="modal" class="modalDialog">
   <div>
-    <a href="#" class="close">+</a>
+    <span class="close">+</span>
     <h1><div class=modalHead>General Info</div></h1>
     <p>Created by Janoris (Mitchell Meier). Inspired by <a href=https://twitter.com/MetalMusicMan_>MetalMusicMan's</a> <a href=https://ultimateframedata.com/>Ultimate Frame Data</a>. Send me a DM to my <a href=https://twitter.com/SandTFGC> region's twitter </a> which I currently run if you notice any errors or have any suggestions (please read the entire info page before you point out an error).</p>
     <p>While this website is "finished", there are still some GIFs and data missing, as well as some other features I am working on developing. Check out the <a href=https://github.com/mitchhit234/meleeWebProject>GitHub</a> page to see my current to-do list
@@ -202,7 +202,7 @@
     <p><strong>Dropping Shield</strong> takes 15 frames. Jumping and grabbing out of shield does not incur shield drop</p>
     <p><strong>Jump Canceling</strong> refers to inputting an up smash, up special, grab, or item throw during a character's jump squat animation to cancel the jump and perform said move. Useful for characters to act quickly out of shield (except Yoshi, who can not jump out of shield), or to use a standing grab instead of a dash grab (to avoid extra frames of lag). <a href=https://smashboards.com/threads/out-of-shield-options-frame-data.294336/>This thread</a> goes into detail about each character's best out of shield options</p>
     <p><strong>Throws</strong> have an interesting property where the amount of frames a throw takes to complete will depend on the weight of the character being thrown. The frame time window listed on this site are defaulted to throw Mario (a mid-weight), but I plan on adding info for how much these windows will change based on character weight in the future.</p>
-  </div>
+</div>
   
 </div>
 <br />
@@ -243,13 +243,38 @@
 </body>
 
 <script>
-const charGrid = document.querySelector('.char-grid');
-const links = Array.from(charGrid.children);
+  const charGrid = document.querySelector('.char-grid');
+  const links = Array.from(charGrid.children);
   function filterChars(input) {
     charGrid.innerHTML = "";
     links.filter(link => link.name.includes(input.toLowerCase())).forEach(link => {
       charGrid.appendChild(link);
     });
+  }
+
+  
+  // Get the modal
+  var modal = document.getElementById("modal");
+  // Get the button that opens the modal
+  var btn = document.getElementById("infoBtn");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+    console.log(modal.style);
+  }
+  // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+    modal.style.display = "none";
+  }
+  // Exit out of modal when clicking outside of modal
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+      window.location.href = '#';
+    }
   }
 </script>
 </div>
