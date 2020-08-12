@@ -391,5 +391,8 @@ def format(name):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host='0.0.0.0',debug=True)
+
+    #change to commented line if debugging
+    #app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
 

@@ -4,24 +4,32 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 
 ![](static/images/logo.png)
 
-## To Do
-* Looking to add data in the future, some possibilites include ledge, tech, and hitstun frame data, as well as frame advantage for moves on shield/crouch cancelling. Data added will mostly come down to what else I am able to find/am given at the moment since I'm not very well accustomed to data mining
 
-* Update admin security
+## Instructions for Deploying Locally
+
+Run the command *python3 __init__.py* from inside the scope of meleeWebProject 
+
+**Packages used** include Flask and SQL_Alchemy
+
+To view from web browser, enter *http://0.0.0.0:5000*. View on mobile/other devices by connecting to the same network as the host and replacing 0.0.0.0 with the host's IP
+
+(I've only ran this on Linux, so if you run into problems on Windows or Mac let me know)
+
+## To Do
+
+* Fill in current missing character data as I come across it, as well as cross check data that came from < 2 sources
+
+* Make GIF Frame by Frame viewer more consistent, either through finding a consistent resource of all GIFs recorded in the same way, or editing each GIF individually
 
 * Keep an eye on frame-by-frame viewer, fix any bugs associated
 
-* Some character data is still missing, need to find a way to extract that info
+* Adding in data for +/- on shields
 
-* Some character data may be inaccurate, need to do cross-checking 
+* Looking to add other data in the future, some possibilites include ledge, tech, and hitstun frame data
 
-* Throw data is inaccurate, throw's total frames are based on the weight of the character they are throwing, a note needs to made of [that](https://smashboards.com/threads/detailed-throws-techs-and-getups-frame-data.206469/)
-
-* Add character stats such as dash duration, rankings for misc info (if you have any suggestions feel free to direct message me on [Twitter](https://twitter.com/SandTFGC))
+* Update admin security
 
 * Find missing character animation GIFs, such as most Pichu's animations and most character's throws
-
-* Add search bar on homepage for characters, potentially search bar on character pages for attacks
 
 * Add more comments to the main python program to improve readability
 
@@ -30,3 +38,5 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 * Possible CSS stylistic changes
 
 * Add Toggelable Dark Mode
+
+
