@@ -7,11 +7,11 @@ The [Melee Database](http://meleeframedata.com) is a web application inspired by
 
 ## Instructions for Deploying Locally
 
-Run the command *python3 `__init__`.py* from inside the scope of meleeWebProject 
+Run the command `python3 __init__.py` from inside the scope of meleeWebProject 
 
 **Packages used** include Flask and SQL_Alchemy
 
-To view from web browser, enter *http://0.0.0.0:5000*. View on mobile/other devices by connecting to the same network as the host and replacing 0.0.0.0 with the host's IP
+To view from web browser, enter `http://0.0.0.0:5000`. View on mobile/other devices by connecting to the same network as the host and replacing 0.0.0.0 with the host's IP
 
 (I've only ran this on Linux, so if you run into problems on Windows or Mac let me know)
 
