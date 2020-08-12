@@ -1,13 +1,13 @@
 # Melee Framedata Database
 
-The [Melee Database](http://meleeframedata.com) is a web application inspired by [Ultimate Frame Data](https://ultimateframedata.com/) to give players easy and convenient access to gameplay data that is otherwise not readily avaliable. The database utilizes Flask as the webframe for the main Python program, which uses SQLAlchemy to store the data for each character
+The [Melee Database](http://meleeframedata.com) is a web application inspired by [Ultimate Frame Data](https://ultimateframedata.com/) to give players easy and convenient access to gameplay data that is otherwise not readily available. The database utilizes Flask as the webframe for the main Python program, which uses SQLAlchemy to store the data for each character
 
 ![](static/images/logo.png)
 
 
 ## Instructions for Deploying Locally
 
-Run the command *python3 __init__.py* from inside the scope of meleeWebProject 
+Run the command *python3 `__init__`.py* from inside the scope of meleeWebProject 
 
 **Packages used** include Flask and SQL_Alchemy
 
@@ -25,7 +25,7 @@ To view from web browser, enter *http://0.0.0.0:5000*. View on mobile/other devi
 
 * Adding in data for +/- on shields
 
-* Looking to add other data in the future, some possibilites include ledge, tech, and hitstun frame data
+* Looking to add other data in the future, some possibilities include ledge, tech, and hitstun frame data
 
 * Update admin security
 
@@ -37,6 +37,6 @@ To view from web browser, enter *http://0.0.0.0:5000*. View on mobile/other devi
 
 * Possible CSS stylistic changes
 
-* Add Toggelable Dark Mode
+* Add Toggleable Dark Mode
 
 
