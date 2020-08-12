@@ -1,5 +1,7 @@
 # This is meant to be run in the main directory
 
+# If looking to just make a couple of folders, alter the characters and moves text files
+
 import os.path 
 from os import path
 
@@ -8,10 +10,10 @@ from PIL import Image
 from PIL import GifImagePlugin
 
 
-with open('stills_resources/characters.txt') as file:
+with open('fbf_resources/characterstxt') as file:
     name_array = file.read().splitlines()
 
-with open('stills_resources/moves.txt') as f:
+with open('fbf_resources/moves.txt') as f:
     move_array = f.read().splitlines()
 
 
@@ -43,7 +45,7 @@ for name in name_array:
 
                 imageObject.save(full_output_path, 'PNG')
 
-            print(name + move + " saved ")
+            print(name + " " + move + " saved ")
 
 
 
