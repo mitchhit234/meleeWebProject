@@ -2,8 +2,6 @@
 
 # If looking to just make a couple of folders, alter the characters and moves text files
 
-# Testing commiting from  atom text editor
-
 import os.path
 from os import path
 
