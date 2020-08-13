@@ -2,7 +2,9 @@
 
 # If looking to just make a couple of folders, alter the characters and moves text files
 
-import os.path 
+# Testing commiting from  atom text editor
+
+import os.path
 from os import path
 
 from PIL import Image
@@ -28,15 +30,15 @@ for name in name_array:
 
         #remove mario and dr mario neutral b gifs since they technically are pngs
         if os.path.isfile(full_input_path):
-            
-            imageObject = Image.open(full_input_path)  
+
+            imageObject = Image.open(full_input_path)
 
             total_frames = imageObject.n_frames
 
             output_dir = name + "/" + move + "/"
 
             for frame in range(0, total_frames):
-        
+
                 imageObject.seek(frame)
 
                 img_name = str(frame) + ".png"
@@ -46,7 +48,3 @@ for name in name_array:
                 imageObject.save(full_output_path, 'PNG')
 
             print(name + " " + move + " saved ")
-
-
-
-
