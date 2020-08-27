@@ -569,10 +569,8 @@
 
 	function reset()
 	{
+		document.querySelector('.bg-modal').style.display = 'none';
 		currentFrame = 0;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
 </script>
