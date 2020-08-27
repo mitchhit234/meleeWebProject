@@ -509,7 +509,9 @@
 
 	function loadMod(val, move_name)
 	{
-		document.querySelector('.bg-modal').style.display = 'flex';
+		const modal = document.querySelector('.bg-modal');
+		modal.style.display = 'flex';
+		modal.onkeydown = handleModalKeypress;
 		move = val
 		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
@@ -517,9 +519,26 @@
 		document.getElementById("moveName").innerHTML = move_name;
 	}
 
+	function handleModalKeypress(e)
+	{
+		switch(e.keyCode) {
+			case 39:
+				forward();
+				break;
+			case 37:
+				backward();
+				break;
+		}
+	}
+
 	function backward()
 	{
-		currentFrame--;
+		if (currentFrame == 0) {
+			currentFrame = {{data[0].total}} - 1;
+		}
+		else {
+			--currentFrame;
+		}
 		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
 		document.getElementById("myText").innerHTML = currentFrame+1;
@@ -527,7 +546,12 @@
 
 	function forward()
 	{
-		currentFrame++;
+		if (currentFrame == {{data[0].total}} - 1) {
+			currentFrame = 0;
+		}
+		else {
+			++currentFrame;
+		}
 		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
 		document.getElementById("myText").innerHTML = currentFrame+1;
