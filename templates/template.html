@@ -533,12 +533,7 @@
 
 	function backward()
 	{
-		if (currentFrame == 0) {
-			currentFrame = {{data[0].total}} - 1;
-		}
-		else {
-			--currentFrame;
-		}
+		currentFrame--;
 		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
 		document.getElementById("myText").innerHTML = currentFrame+1;
@@ -546,12 +541,7 @@
 
 	function forward()
 	{
-		if (currentFrame == {{data[0].total}} - 1) {
-			currentFrame = 0;
-		}
-		else {
-			++currentFrame;
-		}
+		++currentFrame;
 		img_path = generate_path(currentFrame);
 		document.getElementById("modImg").src = img_path;
 		document.getElementById("myText").innerHTML = currentFrame+1;
@@ -569,8 +559,10 @@
 
 	function reset()
 	{
-		document.querySelector('.bg-modal').style.display = 'none';
 		currentFrame = 0;
+		img_path = generate_path(currentFrame);
+		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
 	}
 
 </script>
