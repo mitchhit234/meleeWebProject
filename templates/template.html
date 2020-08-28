@@ -528,6 +528,10 @@
 			case 37:
 				backward();
 				break;
+			case 27:
+				document.querySelector('.bg-modal').style.display = 'none';
+				currentFrame = 0;
+				break;
 		}
 	}
 
