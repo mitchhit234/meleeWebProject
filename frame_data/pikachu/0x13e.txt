@@ -1,7 +1,0 @@
-Total Frames: 9
-IASA:  None
-
-Hit Frames: 
-
-dmg: 17, shield dmg: 2, angle: 361, BK: 100, KS: 60, WDKB: 0, element: electric, clang, no rebound
-hit lag (attacker): 8, hit lag (defender): 12, shield stun: 9

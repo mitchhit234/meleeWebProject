@@ -1,8 +1,0 @@
-Total Frames: 43
-IASA:  None
-Projectile comes out: 23, 25, 28, 31
-
-Throw:
-dmg: 1, angle: 270, BK: 37, KS: 40, WDKB: 0, element: 8
-
-Hit Frames: 

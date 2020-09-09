@@ -1,7 +1,0 @@
-Total Frames: 44
-IASA:  None
-
-Hit Frames: 2-3
-
-dmg: 12, angle: 80, BK: 60, KS: 20, WDKB: 0, no clang, no rebound, only hits grounded
-hit lag: 7, shield stun: 7

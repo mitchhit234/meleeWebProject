@@ -1,5 +1,0 @@
-Total Frames: 39
-IASA:  None
-Projectile comes out: 16
-
-Hit Frames: 
