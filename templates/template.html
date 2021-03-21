@@ -507,15 +507,20 @@
 		currentFrame = 0;
 	});
 
+	function updateFrame(currentFrame)
+	{
+		img_path = generate_path(currentFrame);
+		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
+	}
+
 	function loadMod(val, move_name)
 	{
 		const modal = document.querySelector('.bg-modal');
 		modal.style.display = 'flex';
 		modal.onkeydown = handleModalKeypress;
 		move = val
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		updateFrame(currentFrame);
 		document.getElementById("moveName").innerHTML = move_name;
 	}
 
@@ -538,17 +543,13 @@
 	function backward()
 	{
 		currentFrame--;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		updateFrame(currentFrame);
 	}
 
 	function forward()
 	{
 		++currentFrame;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		updateFrame(currentFrame);
 	}
 
 	function generate_path(num)
@@ -564,9 +565,7 @@
 	function reset()
 	{
 		currentFrame = 0;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		updateFrame(currentFrame);
 	}
 
 </script>
