@@ -506,6 +506,13 @@
 		closeMod();
 	});
 
+	document.querySelector('.bg-modal').onclick = function() {closeMod();};
+
+	document.querySelector('.modal-content').addEventListener('click', function(event)
+	{
+		event.stopPropagation();
+	});
+
 	function updateFrame(currentFrame)
 	{
 		img_path = generate_path(currentFrame);
