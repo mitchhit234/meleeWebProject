@@ -517,7 +517,7 @@
 	{
 		const modal = document.querySelector('.bg-modal');
 		modal.style.display = 'flex';
-		modal.onkeydown = handleModalKeypress;
+		document.body.onkeydown = handleModalKeypress;
 		move = val;
 		document.getElementById("moveName").innerHTML = move_name;
 		currentFrame = 0;
@@ -527,6 +527,7 @@
 	function closeMod()
 	{
 		document.querySelector('.bg-modal').style.display = 'none';
+		document.body.onkeydown = null;
 	}
 
 	function handleModalKeypress(e)
