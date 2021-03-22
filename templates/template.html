@@ -526,14 +526,14 @@
 
 	function handleModalKeypress(e)
 	{
-		switch(e.keyCode) {
-			case 39:
+		switch (e.key) {
+			case "ArrowRight":
 				forward();
 				break;
-			case 37:
+			case "ArrowLeft":
 				backward();
 				break;
-			case 27:
+			case "Escape":
 				document.querySelector('.bg-modal').style.display = 'none';
 				currentFrame = 0;
 				break;
