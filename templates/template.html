@@ -503,7 +503,7 @@
 
 	document.getElementById('close').addEventListener('click', function()
 	{
-		document.querySelector('.bg-modal').style.display = 'none';
+		closeMod();
 	});
 
 	function updateFrame(currentFrame)
@@ -524,6 +524,11 @@
 		updateFrame(currentFrame);
 	}
 
+	function closeMod()
+	{
+		document.querySelector('.bg-modal').style.display = 'none';
+	}
+
 	function handleModalKeypress(e)
 	{
 		switch (e.key) {
@@ -534,7 +539,7 @@
 				backward();
 				break;
 			case "Escape":
-				document.querySelector('.bg-modal').style.display = 'none';
+				closeMod();
 				break;
 		}
 	}
