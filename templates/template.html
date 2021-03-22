@@ -497,14 +497,13 @@
 </div>
 
 <script type="text/javascript">
-	var currentFrame = 0;
+	var currentFrame;
 	var char = "{{path}}";
 	var move = "";
 
 	document.getElementById('close').addEventListener('click', function()
 	{
 		document.querySelector('.bg-modal').style.display = 'none';
-		currentFrame = 0;
 	});
 
 	function updateFrame(currentFrame)
@@ -520,8 +519,9 @@
 		modal.style.display = 'flex';
 		modal.onkeydown = handleModalKeypress;
 		move = val;
-		updateFrame(currentFrame);
 		document.getElementById("moveName").innerHTML = move_name;
+		currentFrame = 0;
+		updateFrame(currentFrame);
 	}
 
 	function handleModalKeypress(e)
@@ -535,7 +535,6 @@
 				break;
 			case "Escape":
 				document.querySelector('.bg-modal').style.display = 'none';
-				currentFrame = 0;
 				break;
 		}
 	}
