@@ -486,7 +486,7 @@
 	<div class="modal-content">
 		<div class="close" id="close">+</div>		
 			<div class="mod_move_name" id="moveName"></div>
-			<img class = "fbf-img" id="modImg" src="" onError="reset()">
+			<img class = "fbf-img" id="modImg" src="">
 			<form action="">
 				<a href="javascript:void(0)" class="button" onclick="backward()">Back</a>
 				<a href="javascript:void(0)" class="button" onclick="forward()">Forward</a>
@@ -498,6 +498,7 @@
 
 <script type="text/javascript">
 	var currentFrame;
+	var maxFrame;
 	var char = "{{path}}";
 	var move = "";
 
@@ -512,6 +513,10 @@
 	{
 		event.stopPropagation();
 	});
+
+	document.getElementById("modImg").onerror = function(error) {
+		onFbfError(error);
+	}
 
 	function updateFrame(currentFrame)
 	{
@@ -528,6 +533,7 @@
 		move = val;
 		document.getElementById("moveName").innerHTML = move_name;
 		currentFrame = 0;
+		maxFrame = Infinity;
 		updateFrame(currentFrame);
 	}
 
@@ -554,13 +560,24 @@
 
 	function backward()
 	{
-		currentFrame--;
+		--currentFrame;
+		if (currentFrame < 0) {
+			if (maxFrame === Infinity) {
+				currentFrame = 0;
+				return;
+			}
+			currentFrame = maxFrame;
+		}
 		updateFrame(currentFrame);
 	}
 
 	function forward()
 	{
 		++currentFrame;
+		if (currentFrame > maxFrame) {
+			reset();
+			return;
+		}
 		updateFrame(currentFrame);
 	}
 
@@ -578,6 +595,15 @@
 	{
 		currentFrame = 0;
 		updateFrame(currentFrame);
+	}
+
+	function onFbfError(error)
+	{
+		const errorFrame = error.target.src.match(/[^-](\d+)\.\w+$/)[1];
+		if (errorFrame) {
+			maxFrame = Math.min(maxFrame, errorFrame - 1);
+		}
+		reset();
 	}
 
 </script>
