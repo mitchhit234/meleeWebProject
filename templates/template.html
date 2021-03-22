@@ -497,9 +497,9 @@
 </div>
 
 <script type="text/javascript">
-	var currentFrame = 0
-	var char = "{{path}}"
-	var move = ""
+	var currentFrame = 0;
+	var char = "{{path}}";
+	var move = "";
 
 	document.getElementById('close').addEventListener('click', function()
 	{
@@ -519,7 +519,7 @@
 		const modal = document.querySelector('.bg-modal');
 		modal.style.display = 'flex';
 		modal.onkeydown = handleModalKeypress;
-		move = val
+		move = val;
 		updateFrame(currentFrame);
 		document.getElementById("moveName").innerHTML = move_name;
 	}
@@ -556,7 +556,7 @@
 	{
 		img_path = "static/gif_stills/";
 		img_path += char + "/";
-		img_path += move + "/"
+		img_path += move + "/";
 		img_path += num.toString();
 		img_path += ".png";
 		return img_path;
