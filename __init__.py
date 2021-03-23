@@ -153,6 +153,7 @@ def login():
         user = hashlib.sha1(user).hexdigest()
         pswd = hashlib.sha1(pswd).hexdigest()
         current_path = os.getcwd()
+        #functionality disabled on server, need to find what path apache runs in
         f = open(current_path+"/static/keys.txt", "r")
         auth_user = (f.readline()).replace("\n", "")
         auth_pswd = (f.readline()).replace("\n", "")
