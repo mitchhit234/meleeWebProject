@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint, PrimaryKeyConstraint, join
 import hashlib
+import os
 
 app = Flask(__name__)
 app.secret_key = "oogabooga"
@@ -151,7 +152,8 @@ def login():
         pswd = request.form["pw"].encode("utf8")
         user = hashlib.sha1(user).hexdigest()
         pswd = hashlib.sha1(pswd).hexdigest()
-        f = open("static/keys.txt", "r")
+        current_path = os.getcwd()
+        f = open(current_path+"/static/keys.txt", "r")
         auth_user = (f.readline()).replace("\n", "")
         auth_pswd = (f.readline()).replace("\n", "")
         f.close()
