@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint, PrimaryKeyConstraint, join
 import hashlib
+import os
 
 app = Flask(__name__)
 app.secret_key = "oogabooga"
@@ -151,8 +152,12 @@ def login():
         pswd = request.form["pw"].encode("utf8")
         user = hashlib.sha1(user).hexdigest()
         pswd = hashlib.sha1(pswd).hexdigest()
-        auth_user = "b2b9d047cb15a4ee2f66e3be0a97e512d2f22473"
-        auth_pswd = "eda91b38e63bc56017dc77a054a540f635c63f31"
+        current_path = os.getcwd()
+        #functionality disabled on server, need to find what path apache runs in
+        f = open(current_path+"/static/keys.txt", "r")
+        auth_user = (f.readline()).replace("\n", "")
+        auth_pswd = (f.readline()).replace("\n", "")
+        f.close()
         if user == auth_user and pswd == auth_pswd:
             return redirect(url_for("admin", usr=user, ps=pswd, a_usr=auth_user, a_ps=auth_pswd))
         else:

@@ -486,7 +486,7 @@
 	<div class="modal-content">
 		<div class="close" id="close">+</div>		
 			<div class="mod_move_name" id="moveName"></div>
-			<img class = "fbf-img" id="modImg" src="" onError="reset()">
+			<img class = "fbf-img" id="modImg" src="">
 			<form action="">
 				<a href="javascript:void(0)" class="button" onclick="backward()">Back</a>
 				<a href="javascript:void(0)" class="button" onclick="forward()">Forward</a>
@@ -497,65 +497,95 @@
 </div>
 
 <script type="text/javascript">
-	var currentFrame = 0
-	var char = "{{path}}"
-	var move = ""
+	var currentFrame;
+	var maxFrame;
+	var char = "{{path}}";
+	var move = "";
 
 	document.getElementById('close').addEventListener('click', function()
 	{
-		document.querySelector('.bg-modal').style.display = 'none';
-		currentFrame = 0;
+		closeMod();
 	});
+
+	document.querySelector('.bg-modal').onclick = function() {closeMod();};
+
+	document.querySelector('.modal-content').addEventListener('click', function(event)
+	{
+		event.stopPropagation();
+	});
+
+	document.getElementById("modImg").onerror = function(error) {
+		onFbfError(error);
+	}
+
+	function updateFrame(currentFrame)
+	{
+		img_path = generate_path(currentFrame);
+		document.getElementById("modImg").src = img_path;
+		document.getElementById("myText").innerHTML = currentFrame+1;
+	}
 
 	function loadMod(val, move_name)
 	{
 		const modal = document.querySelector('.bg-modal');
 		modal.style.display = 'flex';
-		modal.onkeydown = handleModalKeypress;
-		move = val
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		document.body.onkeydown = handleModalKeypress;
+		move = val;
 		document.getElementById("moveName").innerHTML = move_name;
+		currentFrame = 0;
+		maxFrame = Infinity;
+		updateFrame(currentFrame);
+	}
+
+	function closeMod()
+	{
+		document.querySelector('.bg-modal').style.display = 'none';
+		document.body.onkeydown = null;
 	}
 
 	function handleModalKeypress(e)
 	{
-		switch(e.keyCode) {
-			case 39:
+		switch (e.key) {
+			case "ArrowRight":
 				forward();
 				break;
-			case 37:
+			case "ArrowLeft":
 				backward();
 				break;
-			case 27:
-				document.querySelector('.bg-modal').style.display = 'none';
-				currentFrame = 0;
+			case "Escape":
+				closeMod();
 				break;
 		}
 	}
 
 	function backward()
 	{
-		currentFrame--;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		--currentFrame;
+		if (currentFrame < 0) {
+			if (maxFrame === Infinity) {
+				currentFrame = 0;
+				return;
+			}
+			currentFrame = maxFrame;
+		}
+		updateFrame(currentFrame);
 	}
 
 	function forward()
 	{
 		++currentFrame;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		if (currentFrame > maxFrame) {
+			reset();
+			return;
+		}
+		updateFrame(currentFrame);
 	}
 
 	function generate_path(num)
 	{
 		img_path = "static/gif_stills/";
 		img_path += char + "/";
-		img_path += move + "/"
+		img_path += move + "/";
 		img_path += num.toString();
 		img_path += ".png";
 		return img_path;
@@ -564,9 +594,16 @@
 	function reset()
 	{
 		currentFrame = 0;
-		img_path = generate_path(currentFrame);
-		document.getElementById("modImg").src = img_path;
-		document.getElementById("myText").innerHTML = currentFrame+1;
+		updateFrame(currentFrame);
+	}
+
+	function onFbfError(error)
+	{
+		const errorFrame = error.target.src.match(/[^-](\d+)\.\w+$/)[1];
+		if (errorFrame) {
+			maxFrame = Math.min(maxFrame, errorFrame - 1);
+		}
+		reset();
 	}
 
 </script>
