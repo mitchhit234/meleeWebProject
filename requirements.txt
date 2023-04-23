@@ -1,4 +1,4 @@
-jinja2==2.10.3
+jinja2==2.11.3
 Click==7.0
 Flask==1.1.1
 flask_mobility==1.0.0
